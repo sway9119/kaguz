@@ -10,14 +10,8 @@
   </head>
 
   <body> 
-    <header>
-        <h1>Kaguz</h1>
-        <hr>
-    </header>
+    <%= render 'shared/header' %>
     <%= yield %>
-    <footer>
-        <hr>
-        <h3>create by Kaguz</h3>
-    </footer>
+    <%= render 'shared/footer' %>
   </body>
 </html>

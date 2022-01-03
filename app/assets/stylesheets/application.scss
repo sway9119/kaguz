@@ -13,3 +13,18 @@
  *= require_self
  */
 @import "./bootstrap/bootstrap.scss";
+@import "./home.scss";
+
+body {
+  padding-top: 5rem;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 0 4px 0;
+}
+
+footer {
+  background-color: #2e2e2e;
+  color: #fff;
+}
