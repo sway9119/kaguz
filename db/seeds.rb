@@ -9,3 +9,5 @@
 Furniture.create(name: 'テスト家具1')
 Furniture.create(name: 'テスト家具2')
 Furniture.create(name: 'テスト家具3')
+Furniture.create(name: 'テスト家具4')
+Furniture.create(name: 'テスト家具5')
