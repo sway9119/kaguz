@@ -6,8 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Furniture.create(name: 'テスト家具1')
-Furniture.create(name: 'テスト家具2')
-Furniture.create(name: 'テスト家具3')
-Furniture.create(name: 'テスト家具4')
-Furniture.create(name: 'テスト家具5')
+# Furniture.create(name: 'テスト家具1')
+# Furniture.create(name: 'テスト家具2')
+# Furniture.create(name: 'テスト家具3')
+# Furniture.create(name: 'テスト家具4')
+# Furniture.create(name: 'テスト家具5')
+
+Category.create(name: 'チェア・椅子')
+Category.create(name: 'ソファ')
+Category.create(name: 'テーブル')
+Category.create(name: 'デスク')
+Category.create(name: 'ベッド')
+

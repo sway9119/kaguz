@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
     def index
         @furnitures = Furniture.all
+        @categories = Category.all
     end
 
 end
