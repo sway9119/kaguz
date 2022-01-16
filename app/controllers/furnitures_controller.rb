@@ -11,8 +11,12 @@ class FurnituresController < ApplicationController
         @furniture.save
     end
 
-    def show
+    def show()
         @furniture = Furniture.find(params[:id])
+    end
+
+    def show(category_id)
+        @furniture = Furniture.where(category_id: category_id)
     end
 
     private

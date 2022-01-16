@@ -2,7 +2,7 @@
     <h3>家具を探す</h3>
     <ul>
         <% @categories.each do |category| %>
-        <li><%= category.name %>（<%= "3,080" %>）</li>
+        <li><%= link_to category.name, controller: "furnitures", action: "show", id: category.id %>（<%= "3,080" %>）</li>
         <% end %>
     </ul>
 </div>
