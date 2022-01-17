@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     layout "home"
 
     def index
-        @furnitures = Furniture.all
+        @furnitures = Furniture.all.order(created_at: "DESC")
         @categories = Category.all
     end
 
