@@ -1,8 +1,8 @@
 <div class="home_sidebar">
     <h3>家具を探す</h3>
     <ul>
-        <% @categories.each do |category| %>
-        <li><%= link_to category.name, controller: "home", action: "category_search", category_id: category.id %>（<%= "3,080" %>）</li>
+        <% @categories_hash.each do |hash| %>
+        <li><%= link_to hash.category_name, controller: "home", action: "category_search", category_id: hash.category_id %>（<%= hash.category_count %>）</li>
         <% end %>
     </ul>
 </div>
