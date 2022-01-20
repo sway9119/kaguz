@@ -6,16 +6,34 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+## <家具>
+# Furniture.create(name: 'テスト家具1', category_id: '1')
+# Furniture.create(name: 'テスト家具2', category_id: '2')
+# Furniture.create(name: 'テスト家具3', category_id: '3')
+# Furniture.create(name: 'テスト家具4', category_id: '4')
+# Furniture.create(name: 'テスト家具5', category_id: '5')
 
-Furniture.create(name: 'テスト家具1', category_id: '1')
-Furniture.create(name: 'テスト家具2', category_id: '2')
-Furniture.create(name: 'テスト家具3', category_id: '3')
-Furniture.create(name: 'テスト家具4', category_id: '4')
-Furniture.create(name: 'テスト家具5', category_id: '5')
-
+## <カテゴリー>
 # Category.create(name: 'チェア・椅子')
 # Category.create(name: 'ソファ')
 # Category.create(name: 'テーブル')
 # Category.create(name: 'デスク')
 # Category.create(name: 'ベッド')
+
+## <シーン>
+Scene.create(name: 'リビング')
+Scene.create(name: 'ダイニング')
+Scene.create(name: '寝室・ベッドルーム')
+Scene.create(name: 'キッチン')
+Scene.create(name: '玄関・エントランス')
+Scene.create(name: '子供部屋・キッズルーム')
+Scene.create(name: '書斎・ホームオフィス')
+Scene.create(name: 'ガーデン・アウトドア')
+Scene.create(name: '和室')
+
+FurnitureScene.create(furniture_id: 1, scene_id: 5)
+FurnitureScene.create(furniture_id: 2, scene_id: 4)
+FurnitureScene.create(furniture_id: 3, scene_id: 3)
+FurnitureScene.create(furniture_id: 4, scene_id: 2)
+FurnitureScene.create(furniture_id: 5, scene_id: 1)
 

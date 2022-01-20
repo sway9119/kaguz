@@ -1,8 +1,14 @@
 <div class="home_sidebar">
-    <h3>家具を探す</h3>
+    <h3>カテゴリから家具を探す</h3>
     <ul>
         <% @categories_hash.each do |hash| %>
         <li><%= link_to hash.category_name, controller: "home", action: "category_search", category_id: hash.category_id %>（<%= hash.category_count %>）</li>
+        <% end %>
+    </ul>
+    <h3>シーンから家具を探す</h3>
+    <ul>
+        <% @scenes.each do |scene| %>
+        <li><%= scene.name %></li>
         <% end %>
     </ul>
 </div>
