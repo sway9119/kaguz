@@ -7,8 +7,8 @@
     </ul>
     <h3>シーンから家具を探す</h3>
     <ul>
-        <% @scenes.each do |scene| %>
-        <li><%= scene.name %></li>
+        <% @scenes_hash.each do |hash| %>
+        <li><%= link_to hash.scene_name, controller: "home", action: "scene_search", scene_id: hash.scene_id %>（<%= hash.scene_count %>）</li>
         <% end %>
     </ul>
 </div>

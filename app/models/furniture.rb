@@ -1,3 +1,5 @@
 class Furniture < ApplicationRecord
     belongs_to :category
-end
+    has_many :furniture_scenes
+    has_many :scenes, through: :furniture_scenes
+  end

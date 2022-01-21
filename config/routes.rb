@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :home do
     get :category_search, on: :collection
+    get :scene_search, on: :collection
   end
 
   resources :furnitures
