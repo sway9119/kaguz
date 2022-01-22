@@ -37,3 +37,6 @@ Furniture.all.ids.sort.each do |furniture_id|
       FurnitureScene.create(furniture_id: furniture_id, scene_id: scene_id)
     end
 end
+
+# ユーザー
+User.create(name: 'テストユーザー1', email: 'testuser1@example.com', password: '12345678')
