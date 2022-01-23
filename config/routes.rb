@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  get    '/signup',  to: 'users#new'
+  post   '/signup',  to: 'users#create'
+
   resources :home do
     get :category_search, on: :collection
     get :scene_search, on: :collection
