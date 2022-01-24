@@ -2,6 +2,7 @@
     <h1><%= link_to "Kaguz", controller: "home", action: "index" %></h1>
 
     <% if logged_in? %>
+    <%= link_to "マイページ", edit_user_path(current_user) %>
     <%= link_to "ログアウト", logout_path, method: :delete %>
     <% else %>
     <%= link_to "ログイン", login_path %>
