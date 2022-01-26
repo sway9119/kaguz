@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_22_100802) do
+ActiveRecord::Schema.define(version: 2022_01_26_114348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,19 @@ ActiveRecord::Schema.define(version: 2022_01_22_100802) do
     t.string "name", null: false, comment: "ユーザー名称"
     t.string "email", null: false
     t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "workshop_users", force: :cascade do |t|
+    t.integer "workshop_id", null: false, comment: "工房ID"
+    t.integer "user_id", null: false, comment: "ユーザーID"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "workshops", force: :cascade do |t|
+    t.string "name", null: false, comment: "工房名称"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
