@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  
+  layout "home"
+
   def new
     @user = User.new
   end
@@ -7,6 +10,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.save
     redirect_to login_path
+  end
+
+  def show
+    @user = User.find(current_user.id)
+    @workshops = User.find(current_user.id).workshops
   end
 
   def edit

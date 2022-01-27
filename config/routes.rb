@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get    '/signup',  to: 'users#new'
   post   '/signup',  to: 'users#create'
+  get    '/mypage',  to: 'users#show'
   resources :users, only: [:edit, :update]
 
   resources :home do
@@ -15,5 +16,6 @@ Rails.application.routes.draw do
   end
 
   resources :furnitures
+  resources :workshops
 
 end

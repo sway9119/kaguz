@@ -32,11 +32,15 @@
 # Scene.create(name: '和室')
 
 # 家具、シーンのidを列挙して中間テーブルに投入
-Furniture.all.ids.sort.each do |furniture_id|
-    Scene.all.ids.sort.each do |scene_id|
-      FurnitureScene.create(furniture_id: furniture_id, scene_id: scene_id)
-    end
-end
+# Furniture.all.ids.sort.each do |furniture_id|
+#     Scene.all.ids.sort.each do |scene_id|
+#       FurnitureScene.create(furniture_id: furniture_id, scene_id: scene_id)
+#     end
+# end
 
 # ユーザー
-User.create(name: 'テストユーザー1', email: 'testuser1@example.com', password: '12345678')
+# User.create(name: 'テストユーザー1', email: 'testuser1@example.com', password: '12345678')
+
+# 工房
+Workshop.create(name: 'テスト工房1')
+WorkshopUser.create(workshop_id: 1, user_id: 1)
