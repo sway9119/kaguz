@@ -3,6 +3,7 @@
 
     <% if logged_in? %>
     <%= link_to current_user.name + "さん", mypage_path %>
+    <%= link_to "お知らせ", notifications_path %>
     <%= link_to "ログアウト", logout_path, method: :delete %>
     <% else %>
     <%= link_to "ログイン", login_path %>

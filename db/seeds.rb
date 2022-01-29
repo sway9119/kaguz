@@ -42,5 +42,8 @@
 # User.create(name: 'テストユーザー1', email: 'testuser1@example.com', password: '12345678')
 
 # 工房
-Workshop.create(name: 'テスト工房1')
-WorkshopUser.create(workshop_id: 1, user_id: 1)
+# Workshop.create(name: 'テスト工房1')
+# WorkshopUser.create(workshop_id: 1, user_id: 1)
+
+# お知らせ
+Notification.create(sender_id: '2', receiver_id: '1', varity: '1', title: '今なら最大購入金額3倍分ポイント戻ってくる！', message: 'お買い物をするといまならポイントが戻ってくる。Q: 購入後に抽選結果が届きません。抽選結果はキャンペーン期間中1度目の購入後、1週間以内にお知らせいたします。2度目以降の購入後には届きません。', is_read: false)

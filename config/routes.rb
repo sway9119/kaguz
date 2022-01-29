@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'notifications/show'
   root to: "home#index"
 
   get    '/login',   to: 'sessions#new'
@@ -8,7 +9,9 @@ Rails.application.routes.draw do
   get    '/signup',  to: 'users#new'
   post   '/signup',  to: 'users#create'
   get    '/mypage',  to: 'users#show'
-  resources :users, only: [:edit, :update]
+
+  resources :notifications  
+  resources :users
 
   resources :home do
     get :category_search, on: :collection

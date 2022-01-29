@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_26_114348) do
+ActiveRecord::Schema.define(version: 2022_01_29_054912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 2022_01_26_114348) do
     t.datetime "updated_at", null: false
     t.string "image", comment: "画像"
     t.integer "category_id", comment: "カテゴリーID"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.integer "sender_id", null: false, comment: "通知差出人ID"
+    t.integer "receiver_id", null: false, comment: "通知受取人ID"
+    t.integer "varity", null: false, comment: "通知種類"
+    t.text "title", comment: "通知タイトル"
+    t.text "message", comment: "通知内容"
+    t.boolean "is_read", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "scenes", force: :cascade do |t|
