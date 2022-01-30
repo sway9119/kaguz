@@ -1,7 +1,12 @@
+<h1>家具追加</h1>
 <%= form_for @furniture do |f| %>
     <p class="form-group field">
         <%= f.label :name, class: "control-label" %>
         <%= f.text_field :name, class: "form-control" %>
+        <%= f.label :image, class: "control-label" %>
+        <%= f.text_field :image, class: "form-control" %>
+        <%= f.label :category_id, class: "control-label" %>
+        <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: "選択して下さい", class: "form-control" %>
     </p>
     <p>
         <%= f.submit "投稿する", class: "btn btn-primary" %>

@@ -9,6 +9,7 @@ class FurnituresController < ApplicationController
     def create
         @furniture = Furniture.new(furniture_params)
         @furniture.save
+        redirect_to root_path
     end
 
     def show
@@ -18,6 +19,6 @@ class FurnituresController < ApplicationController
     private
 
     def furniture_params
-        params.require(:furniture).permit(:name)
+        params.require(:furniture).permit(:name, :image, :category_id)
     end
 end
