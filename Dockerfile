@@ -1,5 +1,8 @@
 FROM ruby:2.5
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get update -qq && apt-get install -y \
+    nodejs \
+    postgresql-client \
+    imagemagick
 # kaguzと書かれている部分はディレクトリ名に応じて変更します。
 WORKDIR /kaguz
 COPY Gemfile /kaguz/Gemfile
