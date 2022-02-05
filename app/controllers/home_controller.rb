@@ -10,10 +10,12 @@ class HomeController < ApplicationController
 
     def category_search
         @furnitures = Furniture.where(category_id: params[:category_id])
+        render 'index'
     end
 
     def scene_search
         @furnitures = Scene.find(params[:scene_id]).furnitures
+        render 'index'
     end
 
     def get_categories_for_sidebar
