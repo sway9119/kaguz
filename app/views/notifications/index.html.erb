@@ -1,6 +1,6 @@
 <h2>お知らせ</h2>
 <ul>
     <% @notifications.each do |notification| %>
-    <li><%= link_to notification.title %></li>
+    <li><%= link_to notification.title, notification_path(notification.id) %></li>
     <% end %>
 </ul>
