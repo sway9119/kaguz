@@ -1,6 +1,12 @@
 <h2>お知らせ</h2>
 <ul>
     <% @notifications.each do |notification| %>
-    <li><%= link_to notification.title, notification_path(notification.id) %></li>
+    <li>
+        <div><%= link_to notification.title, notification_path(notification.id) %>
+            <time datetime="<%= notification.created_at %>">
+                <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(notification.created_at) %>前
+            </time></span>
+        </div>
+    </li>
     <% end %>
 </ul>
