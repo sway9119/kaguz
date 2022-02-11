@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'jquery-rails' # jQueryの導入
+gem 'rails-i18n' # 日本語化できるようにする
 
 gem 'mini_racer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
