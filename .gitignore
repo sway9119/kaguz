@@ -12,16 +12,63 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
-# Ignore uploaded files in development
+.byebug_history
+.DS_Store
+.rbc
+capybara-.html
+.rspec
+/db/.sqlite3
+/db/.sqlite3-journal
+/db/.sqlite3-[0-9]*
+/public/system
+/coverage/
+/spec/tmp
+.orig
+rerun.txt
+pickle-email-.html
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+.env
+.env.*
+/.bundle
+/vendor/bundle
+.rvmrc
+.bowerrc
+bower.json
+.powenv
+.byebug_history
+/public/packs
+/public/packs-test
+/public/assets
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
 /storage/*
 !/storage/.keep
+/public/uploadse/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
+# Ignore IDE config
+/.idea
+
+# Ignore Redis dump
+/dump.rdb
+
+# Docker
+/docker-compose.override.yml
+/public/packs
+/public/packs-test
 /node_modules
-/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+.docker-env
 
-/public/assets
-.byebug_history
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
+# NodeJS
+yarn.lock
+package-lock.json
