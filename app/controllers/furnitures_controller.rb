@@ -8,8 +8,13 @@ class FurnituresController < ApplicationController
 
     def create
         @furniture = Furniture.new(furniture_params)
-        @furniture.save
-        redirect_to root_path
+        if @furniture.save
+            flash[:success] = "新しい家具を投稿しました。"
+            redirect_to root_path
+        else
+            flash[:danger] = "新しい家具を投稿できませんでした。"
+            render 'new'
+        end
     end
 
     def show
@@ -19,6 +24,6 @@ class FurnituresController < ApplicationController
     private
 
     def furniture_params
-        params.require(:furniture).permit(:name, :image, :category_id)
+        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[])
     end
 end
