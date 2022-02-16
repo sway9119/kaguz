@@ -8,5 +8,7 @@ class NotificationsController < ApplicationController
 
   def show
     @notification = Notification.find(params[:id])
+    @notification.is_read = true
+    @notification.save
   end
 end
