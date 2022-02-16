@@ -2,10 +2,15 @@
 <ul>
     <% @notifications.each do |notification| %>
     <li>
-        <div><%= link_to notification.title, notification_path(notification.id) %>
+        <div>
+            <% if notification.is_read %>
+                <span>既読</span>
+            <% else %>
+                <span>未読</span>
+            <% end %>
+            <%= link_to notification.title, notification_path(notification.id) %>
             <time datetime="<%= notification.created_at %>">
                 <i class="far fa-clock clock-icon"></i><%= time_ago_in_words(notification.created_at) %>前
-                <span><%= notification.is_read %></span>
             </time></span>
         </div>
     </li>
