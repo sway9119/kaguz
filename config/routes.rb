@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post   '/signup',  to: 'users#create'
   get    '/mypage',  to: 'users#show'
 
+  get    '/admin',   to: 'admin_users#index'
+
   resources :notifications  
   resources :users
 
