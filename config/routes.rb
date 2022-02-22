@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   post   '/signup',  to: 'users#create'
   get    '/mypage',  to: 'users#show'
 
-  get    '/admin',   to: 'admin_users#index'
+  # 管理画面
+  namespace :admin do
+    get '/', to: 'home#index', as: :root
+  end
 
   resources :notifications  
   resources :users
