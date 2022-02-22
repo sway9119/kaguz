@@ -41,6 +41,7 @@ yarn-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+/config/master.key
 
 # Ignore IDE config
 /.idea
