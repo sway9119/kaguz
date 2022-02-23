@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   # 管理画面
   namespace :admin do
-    get '/', to: 'home#index', as: :root
+    get    '/'     , to: 'home#index', as: :root
+    get    '/login', to: 'sessions#new'
+    post   '/login', to: 'sessions#create'
   end
 
   resources :notifications  
