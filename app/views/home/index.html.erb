@@ -13,4 +13,23 @@
         <div><%= link_to hash.category_name, controller: "furnitures", action: "category_search", category_id: hash.category_id %>（<%= hash.category_count %>）</div>
         <% end %>
     </div>
+    <div class="home-scene">
+        <h2>利用シーンで選ぶ</h2>
+        <div>
+            <%= image_tag 'lp/img_bedroom.png'%>
+            <div>寝室</div>
+        </div>
+        <div>
+            <%= image_tag 'lp/img_kitchen.png'%>
+            <div>キッチン・ダイニング</div>
+        </div>
+        <div>
+            <%= image_tag 'lp/img_work.png'%>
+            <div>仕事</div>
+        </div>
+        <div>
+            <%= image_tag 'lp/img_living.png'%>
+            <div>リビング</div>
+        </div>
+    </div>
 </div>
