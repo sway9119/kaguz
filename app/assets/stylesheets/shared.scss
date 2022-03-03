@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+
+footer {
+  font-family: Noto Sans JP;
+  height: 92px;
+  background: #413e3e;
+  font-size: 14px;
+  .logo {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    span {
+      padding-left: 16px;
+    }
+  }
+  .link {
+    .row {
+      display: flex;
+      justify-content: flex-end;
+      padding: 22px;
+      margin: 0px;
+      height: 92px;
+      .link-container {
+        display: flex;
+        align-items: center;
+        a {
+          line-height: $leading-tight;
+          @include lineHeightCrop($leading-tight);
+          color: #ffffff;
+          border-right: solid 1px #ffffff;
+          padding: 0 16px 0;
+        }
+        a:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
