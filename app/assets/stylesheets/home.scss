@@ -17,6 +17,10 @@
 #home {
   font-family: $home-font-family;
   @include lineHeightCrop($leading-tight);
+  h2 {
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
 }
 .home-eyecatch {
   background: image-url("eye.png");
@@ -47,8 +51,6 @@
   text-align: center;
 }
 
-.home-category {
-}
 .dev-blank {
   height: 1000px;
   padding: 100px;
@@ -87,6 +89,30 @@
       font-size: 14px;
       color: #000000;
       letter-spacing: -0.5px;
+    }
+  }
+}
+.home-category {
+  padding: 80px;
+  .category-containers {
+    display: flex;
+    flex-wrap: wrap;
+    .category-container {
+      display: flex;
+      width: 283px;
+      height: 60px;
+      margin-right: 2rem;
+      margin-bottom: 32px;
+      .category-propatys {
+        margin-left: 15px;
+        .category-name {
+          font-size: 15px;
+        }
+        .category-counts {
+          color: grey;
+          font-size: 14px;
+        }
+      }
     }
   }
 }
