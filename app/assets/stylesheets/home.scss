@@ -116,3 +116,20 @@
     }
   }
 }
+.home-scene {
+  padding: 80px;
+  .scene-containers {
+    display: flex;
+    .scene-container {
+      margin-right: 32px;
+      width: 283px;
+      img {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
