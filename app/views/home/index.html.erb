@@ -38,7 +38,7 @@
                     <div class="category-counts">(120)</div>
                 </div>
             </div>
-            <div class="category-container">
+            <div class="category-container at-last">
                 <%= image_tag 'lp/img_ctg_cabi.png' %>
                 <div class="category-propatys">
                     <div class="category-name">収納・キャビネット</div>
@@ -90,12 +90,13 @@
         </div>
     </div>
     <div class="home-partner">
-        <h2>利用シーンで選ぶ</h2>
-        <div>
+        <div class="partner-container">
             <%= image_tag 'lp/img_partner.png'%>
-            <h2>パートナー・工場募集</h2>
-            <div>工場として発注を受けることもできます。</div>
-            <%= link_to '詳細を見る', '#' %>
+            <div class="partner-box">
+                <h2>パートナー・工場募集</h2>
+                <p>工場として発注を受けることもできます。</p>
+                <%= link_to '詳細を見る', '#' %>
+            </div>
         </div>
     </div>
     <%= render 'shared/footer' %>
