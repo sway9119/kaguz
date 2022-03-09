@@ -1,7 +1,33 @@
 <div id='home'>
     <%= render 'home/header' %>
     <div class="home-eyecatch">
-
+        <div class="home-search-boxs">
+            <div class="home-search-box">
+                <div class="text-box first-box">
+                    <p class="title">カテゴリ</p>
+                    <p class="text">作りたい家具のイメージを選んでみましょう</p>
+                </div>
+            </div>
+            <div class="home-search-box middle-box">
+                <div class="text-box">
+                    <p class="title">地域選択</p>
+                    <p class="text">お住まいのエリア</p>
+                </div>
+            </div>
+            <div class="home-search-box last-box">
+                <div class="text-box">
+                    <p class="title">ご予算</p>
+                    <p class="text">価格帯を選んでください</p>                
+                </div>
+            </div>
+            <div class="search_button">
+                <%= image_tag 'icon/search.png' %>
+            </div>
+        </div>
+        <div class="home-search-ex-box">
+            <p>もっと柔軟にさがしたい</p>
+            <button>柔軟な検索</button>
+        </div>
     </div>
     <div class='home-description'>
         <div class='home-description-title'>
