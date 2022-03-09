@@ -30,6 +30,7 @@
   left: 0px;
   top: 0px;
   position: relative;
+  font-family: Roboto;
   .home-search-boxs {
     position: absolute;
     top: 80px;
@@ -49,7 +50,6 @@
         font-size: 14px;
         line-height: 16px;
         padding: 0px 12px 0px 30px;
-        font-family: Roboto;
         .title {
           position: static;
           font-weight: bold;
@@ -78,6 +78,31 @@
     }
     .search_button {
       padding: 10px 32px;
+    }
+  }
+  .home-search-ex-box {
+    position: absolute;
+    top: 390px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    line-height: 21px;
+    p {
+      width: 198px;
+      height: 21px;
+      font-weight: bold;
+      color: #ffffff;
+      margin: 14px 0px;
+    }
+    button {
+      padding: 10px;
+      width: 192px;
+      height: 60px;
+      background: #ffffff;
+      box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.14);
+      border-radius: 68px;
+      color: #0500ff;
+      font-weight: bold;
     }
   }
 }
