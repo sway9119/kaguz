@@ -113,18 +113,18 @@
   padding-left: 20px;
   padding-right: 3rem;
 }
-.nav-link {
-  font-size: 14px;
-}
-.nav-user {
-  //   background-color: white;
+.nav-links {
   border-color: gray;
   border: solid 1px;
   border-radius: 91px;
   width: 73px;
-  padding: 3px;
-  height: 30px;
-  text-align: center;
+  height: 32px;
+  display: flex;
+  background-color: white;
+  .nav-link {
+    height: 100%;
+    padding: 0;
+  }
 }
 
 .dev-blank {
