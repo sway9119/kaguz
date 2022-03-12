@@ -1,12 +1,16 @@
-<header class="navbar fixed-top">
-    <h1><%= link_to "Kaguz", controller: "home", action: "index" %></h1>
-
-    <% if logged_in? %>
-    <%= link_to current_user.name + "さん", mypage_path %>
-    <%= link_to "お知らせ", notifications_path %>
-    <%= link_to "ログアウト", logout_path, method: :delete %>
-    <% else %>
-    <%= link_to "ログイン", login_path %>
-    <%= link_to "新規登録", signup_path %>
-    <% end %>
+<header class="navbar">
+    <div class="nav-box">
+        <a class="navbar-brand" href="#">LOGO</a>
+    </div>
+    <div class="nav-box">
+        <% if logged_in? %>
+        <div class="nav-item"><%= link_to current_user.name + "さん", mypage_path %></div>
+        <div class="nav-item"><%= link_to "お知らせ", notifications_path %></div>
+        <div class="nav-item"><%= link_to "ログアウト", logout_path, method: :delete %></div>
+        <% else %>
+        <div class="nav-item"><%= link_to "ログイン", login_path %></div>
+        <div class="nav-item"><%= link_to "新規登録", signup_path %></div>
+        <%= link_to "掲載を依頼する", signup_path, class: "nav-item partner" %>
+        <% end %>
+    </div>
 </header>
