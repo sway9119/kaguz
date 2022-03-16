@@ -1,0 +1,12 @@
+<div class="furnitures-sidebar">
+    <div class="head">
+        <p><span class="bold">カテゴリー</span>からさがす</p>
+    </div>
+    <div class="body">
+        <ul>
+            <% @categories_hash.each do |hash| %>
+            <li><%= link_to hash.category_name, controller: "furnitures", action: "category_search", category_id: hash.category_id %></li>
+            <% end %>
+        </ul>
+    </div>
+</div>
