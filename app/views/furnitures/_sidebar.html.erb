@@ -1,12 +1,27 @@
 <div class="furnitures-sidebar">
-    <div class="head">
-        <p><span class="bold">カテゴリー</span>からさがす</p>
+    <div class="search-box category-search">
+        <div class="head">
+            <p><span class="bold">カテゴリー</span>からさがす</p>
+        </div>
+        <div class="body">
+            <ul>
+                <% @categories_hash.each do |hash| %>
+                <li><%= link_to hash.category_name, controller: "furnitures", action: "category_search", category_id: hash.category_id %></li>
+                <% end %>
+            </ul>
+        </div>
     </div>
-    <div class="body">
-        <ul>
-            <% @categories_hash.each do |hash| %>
-            <li><%= link_to hash.category_name, controller: "furnitures", action: "category_search", category_id: hash.category_id %></li>
+    <div class="search-box detailed-search">
+        <div class="head">
+            <p><span class="bold">こだわりの条件</span>を指定する</p>
+        </div>
+        <div class="body">
+            <%= form_with(url: furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
+            <% @materials.each do |material| %>
+                <div class="material-item"><%= f.check_box :material %><p><%= material %></p></div>
             <% end %>
-        </ul>
+            <%= f.submit "絞り込み", class: "search-btn" %>
+            <% end %>
+        </div>
     </div>
 </div>
