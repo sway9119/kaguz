@@ -17,9 +17,25 @@
         </div>
         <div class="body">
             <%= form_with(url: furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
-            <% @materials.each do |material| %>
-                <div class="material-item"><%= f.check_box :material %><p><%= material %></p></div>
-            <% end %>
+            <div class="detailed-search-head">素材</div>
+            <div class="detailed-search-body">
+                <% @materials.each do |material| %>
+                    <div class="material-item"><%= f.check_box :material %><p><%= material %></p></div>
+                <% end %>
+            </div>
+            <div class="detailed-search-head">色</div>
+            <div class="detailed-search-body">
+                <% @colors_hash.each do |color| %>
+                    <div class="color-item">
+                        <%= f.check_box :color %>
+                        <span class="<%= color[:klass] %>"></span>
+                        <p><%= color[:name] %></p>
+                    </div>
+                <% end %>
+            </div>
+            <div class="detailed-search-head">サイズ</div>
+            <div class="detailed-search-body">
+            </div>
             <%= f.submit "絞り込み", class: "search-btn" %>
             <% end %>
         </div>
