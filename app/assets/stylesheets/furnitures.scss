@@ -109,6 +109,26 @@
           line-height: 28px;
           color: #ffffff;
         }
+        div > .size-head {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+        div > .size-body {
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          .size-form {
+            width: 80px;
+            height: 48px;
+            margin-right: 16px;
+            border: 1px solid #79747e;
+            border-radius: 4px;
+            padding-left: 10px;
+          }
+          span {
+            margin-right: 16px;
+          }
+        }
       }
     }
   }

@@ -35,6 +35,30 @@
             </div>
             <div class="detailed-search-head">サイズ</div>
             <div class="detailed-search-body">
+                <div class="size-width">
+                    <div class="size-head">幅（mm）</div>
+                    <div class="size-body">
+                        <%= f.text_field :size_width_from, class: "size-form", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :size_width_to, class: "size-form", placeholder: "max" %>
+                    </div>                
+                </div>
+                <div class="size-height">
+                    <div class="size-head">高さ（mm）</div>
+                    <div class="size-body">
+                        <%= f.text_field :size_height_from, class: "size-form", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :size_height_to, class: "size-form", placeholder: "max" %>
+                    </div>                                
+                </div>
+                <div class="size-depth">
+                    <div class="size-head">奥行き（mm）</div>
+                    <div class="size-body">
+                        <%= f.text_field :size_depth_from, class: "size-form", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :size_depth_to, class: "size-form", placeholder: "max" %>
+                    </div>                                
+                </div>
             </div>
             <%= f.submit "絞り込み", class: "search-btn" %>
             <% end %>
