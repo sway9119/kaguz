@@ -35,29 +35,40 @@
             </div>
             <div class="detailed-search-head">サイズ</div>
             <div class="detailed-search-body">
-                <div class="size-width">
-                    <div class="size-head">幅（mm）</div>
-                    <div class="size-body">
-                        <%= f.text_field :size_width_from, class: "size-form", placeholder: "min" %>
+                <div class="form-box size-width">
+                    <div class="form-head">幅（mm）</div>
+                    <div class="form-body">
+                        <%= f.text_field :size_width_from, class: "form-item", placeholder: "min" %>
                         <span>〜</span>
-                        <%= f.text_field :size_width_to, class: "size-form", placeholder: "max" %>
+                        <%= f.text_field :size_width_to, class: "form-item", placeholder: "max" %>
                     </div>                
                 </div>
-                <div class="size-height">
-                    <div class="size-head">高さ（mm）</div>
-                    <div class="size-body">
-                        <%= f.text_field :size_height_from, class: "size-form", placeholder: "min" %>
+                <div class="form-box size-height">
+                    <div class="form-head">高さ（mm）</div>
+                    <div class="form-body">
+                        <%= f.text_field :size_height_from, class: "form-item", placeholder: "min" %>
                         <span>〜</span>
-                        <%= f.text_field :size_height_to, class: "size-form", placeholder: "max" %>
+                        <%= f.text_field :size_height_to, class: "form-item", placeholder: "max" %>
                     </div>                                
                 </div>
-                <div class="size-depth">
-                    <div class="size-head">奥行き（mm）</div>
-                    <div class="size-body">
-                        <%= f.text_field :size_depth_from, class: "size-form", placeholder: "min" %>
+                <div class="form-box size-depth">
+                    <div class="form-head">奥行き（mm）</div>
+                    <div class="form-body">
+                        <%= f.text_field :size_depth_from, class: "form-item", placeholder: "min" %>
                         <span>〜</span>
-                        <%= f.text_field :size_depth_to, class: "size-form", placeholder: "max" %>
+                        <%= f.text_field :size_depth_to, class: "form-item", placeholder: "max" %>
                     </div>                                
+                </div>
+            </div>
+            <div class="detailed-search-head">予算</div>
+            <div class="detailed-search-body">
+                <div class="form-box">
+                    <div class="form-head">価格（円）</div>
+                    <div class="form-body">
+                        <%= f.text_field :price_from, class: "form-item", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :price_to, class: "form-item", placeholder: "max" %>
+                    </div>                
                 </div>
             </div>
             <%= f.submit "絞り込み", class: "search-btn" %>
