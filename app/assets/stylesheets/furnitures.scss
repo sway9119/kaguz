@@ -180,6 +180,19 @@
   }
 }
 
+/* 固有スタイル */
+.breadcrumbs {
+  font-family: "Noto Sans";
+  color: #413e3e;
+  margin-top: 24px;
+  a {
+    color: #413e3e;
+  }
+  .current {
+    font-weight: 700;
+  }
+}
+
 .sidebar-color {
   width: 12px;
   height: 12px;
