@@ -1,12 +1,19 @@
 .furnitures {
   padding: 0 70px;
   .title {
-    padding: 100px 27px;
+    margin-top: 16px;
     h1 {
       font-family: Roboto;
       font-size: 30px;
       font-weight: 700;
       line-height: 41px;
+    }
+  }
+  .main {
+    margin-top: 40px;
+    display: flex;
+    .contents {
+      margin-left: 40px;
     }
   }
   .furnitures-sidebar {
@@ -192,7 +199,6 @@
     font-weight: 700;
   }
 }
-
 .sidebar-color {
   width: 12px;
   height: 12px;
