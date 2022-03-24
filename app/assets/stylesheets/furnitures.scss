@@ -141,12 +141,11 @@
   }
   .keyword-search {
     height: 48px;
-    width: 800px;
     display: flex;
     align-items: center;
     border: 0.5px solid #cecccc;
     border-radius: 4px;
-    margin: 0px 8px 8px;
+    margin: 0px 0px 8px;
     padding: 2px;
     .search-form {
       width: auto;
@@ -165,10 +164,60 @@
         width: 45px;
         height: 45px;
         display: flex;
+        margin-left: auto;
         align-items: center;
         justify-content: center;
         background-color: #ffa800;
         border-radius: 0px 4px 4px 0px;
+      }
+    }
+  }
+  .contents-head {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    .item-counts {
+      font-family: Noto Sans;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19px;
+      color: #717171;
+    }
+    .item-sort {
+      margin-left: auto;
+      display: flex;
+      align-items: flex-end;
+      div {
+        margin-left: 24px;
+        color: #717171;
+        font-family: Noto Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      .current-sort {
+        color: #ffa800;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 140%;
+      }
+      .item-sort-recomend {
+      }
+      .item-sort-new {
+      }
+      .item-sort-popularity {
+      }
+    }
+  }
+  .contents-body {
+    .item-boxs {
+      .item-box {
+        .item-image {
+        }
+        .item-title {
+        }
+        .item-text {
+        }
       }
     }
   }
