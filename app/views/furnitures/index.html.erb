@@ -23,8 +23,28 @@
                     <div class="item-sort-popularity">人気順</div>
                 </div>
             </div>
-            <div class="contents-body"></div>
+            <div class="contents-body">
+                <div class="item-boxs">
+                    <% i = 0 %>
+                    <% @furnitures.each do |furniture| %>
+                    <% i += 1 %>
+                    <% if i == 3 %>
+                        <div class="item-box last-child">
+                        <% i = 0 %>
+                        <% else %>
+                        <div class="item-box">
+                    <% end %>
+                        <% if furniture.image.present? %>
+                            <%= image_tag furniture.image_url, class: "bd-placeholder-img item-image", size: "250x170" %>
+                        <% else %>
+                            <%= image_tag "https://placehold.jp/250x170.png", class: "bd-placeholder-img item-image", size: "250x170" %>
+                        <% end %>
+                        <p class="item-title"><%= furniture.name %></p>
+                        <p class="item-text">これは、椅子です。</p>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>

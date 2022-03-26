@@ -14,6 +14,7 @@
     display: flex;
     .contents {
       margin-left: 40px;
+      width: 800px;
     }
   }
   .furnitures-sidebar {
@@ -148,7 +149,7 @@
     margin: 0px 0px 8px;
     padding: 2px;
     .search-form {
-      width: auto;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -211,13 +212,32 @@
   }
   .contents-body {
     .item-boxs {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
       .item-box {
+        width: 250px;
+        font-family: Roboto;
+        font-size: 15px;
+        line-height: 22px;
+        margin-right: 24px;
+        margin-bottom: 24px;
         .item-image {
+          border-radius: 4px;
+          height: 170px;
+          object-fit: cover;
         }
         .item-title {
+          font-weight: 700;
+          margin: 6px 0 0 0;
         }
         .item-text {
+          font-weight: 500;
+          margin: 6px 0 0 0;
         }
+      }
+      .last-child {
+        margin-right: 0;
       }
     }
   }
