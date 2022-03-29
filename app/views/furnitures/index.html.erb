@@ -1,4 +1,4 @@
-<div class="furnitures">
+<div class="furnitures furnitures_index">
     <% breadcrumb :furnitures_search %>
     <%= breadcrumbs separator: " &rsaquo; " %>
     <div class="title">
@@ -25,24 +25,24 @@
             </div>
             <div class="contents-body">
                 <div class="item-boxs">
-                    <% i = 0 %>
-                    <% @furnitures.each do |furniture| %>
+                <% i = 0 %>
+                <% @furnitures.each do |furniture| %>
                     <% i += 1 %>
                     <% if i == 3 %>
-                        <div class="item-box last-child">
-                        <% i = 0 %>
-                        <% else %>
-                        <div class="item-box">
+                    <a href="/furnitures/<%= furniture.id %>" class="item-box last-child">
+                    <% i = 0 %>
+                    <% else %>
+                    <a href="/furnitures/<%= furniture.id %>" class="item-box">
                     <% end %>
-                        <% if furniture.image.present? %>
-                            <%= image_tag furniture.image_url, class: "bd-placeholder-img item-image", size: "250x170" %>
-                        <% else %>
-                            <%= image_tag "https://placehold.jp/250x170.png", class: "bd-placeholder-img item-image", size: "250x170" %>
-                        <% end %>
-                        <p class="item-title"><%= furniture.name %></p>
-                        <p class="item-text">これは、椅子です。</p>
-                    </div>
+                    <% if furniture.image.present? %>
+                        <%= image_tag furniture.image_url, class: "bd-placeholder-img item-image", size: "250x170" %>
+                    <% else %>
+                        <%= image_tag "https://placehold.jp/250x170.png", class: "bd-placeholder-img item-image", size: "250x170" %>
                     <% end %>
+                    <p class="item-title"><%= furniture.name %></p>
+                    <p class="item-text">これは、椅子です。</p>
+                    </a>
+                <% end %>
                 </div>
             </div>
         </div>
