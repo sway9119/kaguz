@@ -1,11 +1,21 @@
-    <div class="col-9">
-        <h3>家具一覧</h3>
-        <div class="card-columns">
-            <div class="card" style="width: 18rem;">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
-                <div class="card-body">
-                    <%= link_to @furniture.name, furniture_path(@furniture.id) %>
-                </div>
+<div class="furnitures furnitures_show">
+    <% breadcrumb :furnitures_show %>
+    <%= breadcrumbs separator: " &rsaquo; " %>
+    <div class="main-contents">
+        <div class="main-content">
+            <% if @furniture.image.present? %>
+            <%= image_tag @furniture.image_url, class: "main-image" %>
+            <% else %>
+            <%= image_tag "https://placehold.jp/627x437.png", class: "main-image" %>
+            <% end %>
+            <div class="sub-images">
+                <% for i in 1..4 do %>
+                <img src="https://placehold.jp/92x64.png" class="sub-image">                    
+                <% end %>
             </div>
         </div>
+
     </div>
+    </div>
+
+</div>

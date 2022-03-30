@@ -1,0 +1,22 @@
+.furnitures_show {
+  .main-contents {
+    margin-top: 40px;
+
+    .main-content {
+      .main-image {
+        width: 627px;
+        height: 437px;
+
+        border-radius: 4px;
+        border: solid 1px #ddd;
+      }
+      .sub-images {
+        margin-top: 28px;
+        .sub-image {
+          width: 92px;
+          height: 64px;
+        }
+      }
+    }
+  }
+}
