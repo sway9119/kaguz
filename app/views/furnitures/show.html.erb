@@ -1,7 +1,7 @@
 <div class="furnitures furnitures_show">
     <% breadcrumb :furnitures_show %>
     <%= breadcrumbs separator: " &rsaquo; " %>
-    <div class="main-contents">
+    <div class="contents">
         <div class="main-content">
             <% if @furniture.image.present? %>
             <%= image_tag @furniture.image_url, class: "main-image" %>
@@ -14,8 +14,32 @@
                 <% end %>
             </div>
         </div>
-
-    </div>
+        <div class="sub-content">
+            <div class="lavel-category">
+                <%= image_tag "icon/category-icon.png", class: "lavel-category-icon" %>
+                <p class="lavel-category-name">収納家具</p>
+            </div>
+            <div class="lavel-tag">
+                <%= image_tag "icon/tag-icon.png", class: "lavel-tag-icon" %>
+                <div class="lavel-tag-name">本体品合板</div>
+                <div class="lavel-tag-name">盆</div>
+                <div class="lavel-tag-name">桐集成材</div>
+            </div>
+            <div class="lavel-title">
+                <div class="lavel-title-name">K邸 和服専用収納</div>
+            </div>
+            <div class="lavel-like">
+                <p class="text">お気に入り登録者数</p>
+                <div class="lavel-like-counts">120人</div>
+            </div>
+            <div class="lavel-reference_price">
+                <p class="text">参考価格</p>
+                <div class="lavel-reference_price-value">¥ 300,000~</div>
+            </div>
+            <div class="lavel-message">
+                <div class="lavel-message-value">注意事項とか<br>制作日数は、ヒアリングから3〜6ヶ月頂戴しております。</div>
+            </div>
+        </div>
     </div>
 
 </div>
