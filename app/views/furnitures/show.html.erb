@@ -15,29 +15,40 @@
             </div>
         </div>
         <div class="sub-content">
-            <div class="lavel-category">
-                <%= image_tag "icon/category-icon.png", class: "lavel-category-icon" %>
-                <p class="lavel-category-name">収納家具</p>
+            <div class="label-category">
+                <%= image_tag "icon/category-icon.png", class: "label-category-icon" %>
+                <p class="label-category-name">収納家具</p>
             </div>
-            <div class="lavel-tag">
-                <%= image_tag "icon/tag-icon.png", class: "lavel-tag-icon" %>
-                <div class="lavel-tag-name">本体品合板</div>
-                <div class="lavel-tag-name">盆</div>
-                <div class="lavel-tag-name">桐集成材</div>
+            <div class="label-tag">
+                <%= image_tag "icon/tag-icon.png", class: "label-tag-icon" %>
+                <div class="label-tag-name">本体品合板</div>
+                <div class="label-tag-name">盆</div>
+                <div class="label-tag-name">桐集成材</div>
             </div>
-            <div class="lavel-title">
-                <div class="lavel-title-name">K邸 和服専用収納</div>
+            <div class="label-title">
+                <div class="label-title-name">K邸 和服専用収納</div>
             </div>
-            <div class="lavel-like">
+            <div class="label-like">
                 <p class="text">お気に入り登録者数</p>
-                <div class="lavel-like-counts">120人</div>
+                <div class="label-like-counts">120人</div>
             </div>
-            <div class="lavel-reference_price">
+            <div class="label-reference_price">
                 <p class="text">参考価格</p>
-                <div class="lavel-reference_price-value">¥ 300,000~</div>
+                <div class="label-reference_price-value">¥ 300,000~</div>
             </div>
-            <div class="lavel-message">
-                <div class="lavel-message-value">注意事項とか<br>制作日数は、ヒアリングから3〜6ヶ月頂戴しております。</div>
+            <div class="label-message">
+                <div class="label-message-value">注意事項とか<br>制作日数は、ヒアリングから3〜6ヶ月頂戴しております。</div>
+            </div>
+            <div class="label-status">
+                <div class="label-status-value">
+                    <% status = 1%>
+                    <% if status == 1 then %>
+                    <span class="status-message1">対応可能</span><span class="status-message2">（2~3営業日以内に返信）</span>
+                    <% else %>
+                    <span class="status-message1">対応不可</span><span class="status-message2"></span>
+                    <% end %>
+                    <a class="inquiry" href="#">問い合わせる</a><%= image_tag "icon/like.png"%>
+                </div>
             </div>
         </div>
     </div>
