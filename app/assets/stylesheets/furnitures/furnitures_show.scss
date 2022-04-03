@@ -159,6 +159,42 @@
           }
         }
       }
+      .label-discription {
+        margin-top: 72px;
+        .nav {
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 19px;
+          color: #413e3e;
+
+          .nav-item {
+            a {
+              width: 142px;
+              height: 58px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #ddd;
+              border: 1px solid #c4c4c4;
+              border-radius: 4px 4px 0px 0px;
+              text-decoration: none;
+              color: #fff;
+              margin-right: 4px;
+            }
+            .active {
+              border-bottom: none;
+              background-color: #fff;
+              color: #413e3e;
+            }
+          }
+        }
+        .tab-content {
+          padding: 30px;
+          width: 440px;
+          height: 200px;
+        }
+      }
     }
   }
 }
