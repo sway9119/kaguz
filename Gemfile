@@ -16,13 +16,13 @@ gem 'rails-i18n' # 日本語化できるようにする
 
 gem 'mini_racer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # gem 'redis', '~> 4.0'
 
 # gem 'mini_magick', '~> 4.8'
 # gem 'capistrano-rails', group: :development
 
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '~> 4.5.0', require: false # bootstrapの導入
 
 gem 'carrierwave'
 gem 'mini_magick'
