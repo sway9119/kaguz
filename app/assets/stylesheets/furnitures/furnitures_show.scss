@@ -195,6 +195,64 @@
           height: 200px;
         }
       }
+      .label-workshop {
+        margin-top: 160px;
+        width: 464px;
+        h3 {
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .label-workshop-card {
+          display: flex;
+          height: 160px;
+          background: #ffffff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 4px;
+          .label-workshop-card-image {
+          }
+          .label-workshop-card-box {
+            padding: 16px;
+            width: 100%;
+            position: relative;
+            .workshop-name {
+              font-family: "Noto Sans JP";
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+            .workshop-namekana {
+              font-family: "Noto Sans JP";
+              font-size: 12px;
+              line-height: 17px;
+              color: #413e3e;
+            }
+            .workshop-discription {
+              position: absolute;
+              bottom: 16px;
+              font-family: "Noto Sans";
+              font-size: 14px;
+              line-height: 19px;
+              color: #413e3e;
+            }
+          }
+        }
+        .lavel-workshop-link {
+          margin-top: 16px;
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 16px;
+          .workshop-link {
+            font-family: "Noto Sans";
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            color: #4285f4;
+          }
+        }
+      }
     }
   }
 }
