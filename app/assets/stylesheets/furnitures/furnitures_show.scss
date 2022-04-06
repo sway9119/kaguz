@@ -19,6 +19,43 @@
           margin-right: 16px;
         }
       }
+      .label-related-furnitures {
+        margin-top: 40px;
+        padding: 16px;
+        width: 627px;
+        h3 {
+          border-left: solid 6px #ffa800;
+          padding-left: 8px;
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .furniture-boxs {
+          margin-top: 19px;
+          display: flex;
+          flex-wrap: wrap;
+          .furniture-box {
+            margin: 16px 16px 8px 0;
+            .furniture-title {
+              margin: 16px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+            .furniture-text {
+              margin: 8px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+          }
+        }
+      }
     }
     .sub-content {
       margin-left: 40px;

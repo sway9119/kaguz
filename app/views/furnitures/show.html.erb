@@ -13,6 +13,20 @@
                 <img src="https://placehold.jp/92x64.png" class="sub-image">                    
                 <% end %>
             </div>
+            <div class="label-related-furnitures">
+                <h3>関連する家具</h3>
+                <div class="furniture-boxs">
+                    <% i = 0 %>
+                    <% for i in 1..6 do %>
+                    <div class="furniture-box">
+                        <%= image_tag "https://placehold.jp/140x100.png", class: "furnitue-image" %>
+                        <p class="furniture-title">ソファ</p>
+                        <p class="furniture-text">これはソファです。</p>
+                    </div>
+                    <% end %>
+                </div>
+
+            </div>
         </div>
         <div class="sub-content">
             <div class="label-category">
