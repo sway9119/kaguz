@@ -25,7 +25,19 @@
                     </div>
                     <% end %>
                 </div>
-
+            </div>
+            <div class="label-related-workshops">
+                <h3>関連する家具</h3>
+                <div class="workshop-boxs">
+                    <% i = 0 %>
+                    <% for i in 1..3 do %>
+                    <div class="workshop-box">
+                        <%= image_tag "https://placehold.jp/140x100.png", class: "furnitue-image" %>
+                        <p class="workshop-title">太郎木工</p>
+                        <p class="workshop-text">三鷹市</p>
+                    </div>
+                    <% end %>
+                </div>
             </div>
         </div>
         <div class="sub-content">
