@@ -16,3 +16,13 @@ crumb :furnitures_show do
   link "家具詳細", :furnitures
   parent :furnitures_search
 end
+
+crumb :workshops_index do
+  link "工房一覧", :workshops
+  parent :root
+end
+
+crumb :workshops_show do
+  link "工房詳細", :workshops
+  parent :workshops_index
+end

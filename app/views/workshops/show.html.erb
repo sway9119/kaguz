@@ -1,3 +1,4 @@
-<h1>工房情報</h1>
-<div><%= @workshop.name %></div>
-<div><%= link_to "家具を投稿する", new_furniture_path %></div>
+<div class="workshops workshops_show">
+    <% breadcrumb :workshops_show %>
+    <%= breadcrumbs separator: " &rsaquo; " %>
+</div>

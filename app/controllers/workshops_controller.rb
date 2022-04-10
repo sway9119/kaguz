@@ -1,6 +1,6 @@
 class WorkshopsController < ApplicationController
 
-    layout "home"
+    layout "application"
 
     def show
         @workshop = Workshop.find(params[:id])
