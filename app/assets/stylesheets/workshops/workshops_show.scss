@@ -46,6 +46,48 @@
           color: #413e3e;
         }
         .workshop-discription-text {
+          margin-top: 16px;
+          height: 270px;
+          font-family: "Noto Sans";
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #413e3e;
+        }
+      }
+      .workshop-record {
+        margin-top: 27px;
+        h3 {
+          border-left: solid 6px #ffa800;
+          padding-left: 8px;
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .furniture-boxs {
+          margin-top: 19px;
+          display: flex;
+          flex-wrap: wrap;
+          .furniture-box {
+            margin: 16px 16px 8px 0;
+            .furniture-title {
+              margin: 16px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+            .furniture-text {
+              margin: 8px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+          }
         }
       }
     }

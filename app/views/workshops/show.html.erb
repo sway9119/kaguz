@@ -28,7 +28,19 @@
                     太郎木工 代表　関 太郎
                 </div>
             </div>
-        
+            <div class="workshop-record">
+                <h3>制作実績</h3>
+                <div class="furniture-boxs">
+                    <% i = 0 %>
+                    <% for i in 1..6 do %>
+                    <div class="furniture-box">
+                        <%= image_tag "https://placehold.jp/140x100.png", class: "furnitue-image" %>
+                        <p class="furniture-title">ソファ</p>
+                        <p class="furniture-text">これはソファです。</p>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
         </div>
     </div>
 </div>
