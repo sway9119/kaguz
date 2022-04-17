@@ -90,6 +90,42 @@
           }
         }
       }
+      .related-workshops {
+        margin-top: 40px;
+        width: 627px;
+        h3 {
+          border-left: solid 6px #ffa800;
+          padding-left: 8px;
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .workshop-boxs {
+          margin-top: 29px;
+          display: flex;
+          flex-wrap: wrap;
+          .workshop-box {
+            margin: 16px 16px 8px 0;
+            .workshop-title {
+              margin: 16px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+            .workshop-text {
+              margin: 8px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+          }
+        }
+      }
     }
   }
 }
