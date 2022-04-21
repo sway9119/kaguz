@@ -165,6 +165,31 @@
             }
           }
         }
+        .workshop-info {
+          margin-top: 27px;
+          p {
+            font-family: "Noto Sans JP";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          .workshop-info-name-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-name {
+              margin: 0 0 0 33px;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+        }
       }
     }
   }
