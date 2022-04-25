@@ -189,6 +189,51 @@
               color: #413e3e;
             }
           }
+          .workshop-info-tel-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-tel {
+              margin: 0 0 0 13px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+          .workshop-info-url-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-url {
+              margin: 0 0 0 13px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+          .workshop-info-address-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-address {
+              margin: 0 0 0 13px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
         }
       }
     }
