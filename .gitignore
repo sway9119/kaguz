@@ -61,3 +61,6 @@ yarn-debug.log*
 # NodeJS
 yarn.lock
 package-lock.json
+
+# Develop環境
+/.env
