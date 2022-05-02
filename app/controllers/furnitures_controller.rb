@@ -12,6 +12,7 @@ class FurnituresController < ApplicationController
 
     def category_search
         @furnitures = Furniture.where(category_id: params[:category_id])
+        @category = Category.find(params[:category_id])
         render 'index'
     end
 
