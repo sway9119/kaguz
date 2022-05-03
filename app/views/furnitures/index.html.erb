@@ -2,7 +2,11 @@
     <% breadcrumb :furnitures_search %>
     <%= breadcrumbs separator: " &rsaquo; " %>
     <div class="title">
+        <% if @category != nil %>
         <h1><%= @category.name %></h1>
+        <% elsif @scene != nil %>
+        <h1><%= @scene.name %></h1>
+        <% end %>
     </div>
     <div class="main">
         <%= render 'sidebar' %>

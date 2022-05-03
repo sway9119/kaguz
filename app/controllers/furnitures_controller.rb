@@ -18,6 +18,7 @@ class FurnituresController < ApplicationController
 
     def scene_search
         @furnitures = Scene.find(params[:scene_id]).furnitures
+        @scene = Scene.find(params[:scene_id])
         render 'index'
     end
 
