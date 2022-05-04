@@ -103,15 +103,15 @@
             </div>
             <div class="scene-container">
                 <%= image_tag 'lp/img_kitchen.png'%>
-                <p>キッチン・ダイニング</p>
+                <%= link_to "キッチン・ダイニング", scene_search_furnitures_path(scene_id: "2") %>
             </div>
             <div class="scene-container">
                 <%= image_tag 'lp/img_work.png'%>
-                <p>仕事</p>
+                <%= link_to "仕事", scene_search_furnitures_path(scene_id: "3") %>
             </div>
             <div class="scene-container">
                 <%= image_tag 'lp/img_living.png'%>
-                <p>リビング</p>
+                <%= link_to "リビング", scene_search_furnitures_path(scene_id: "4") %>
             </div>
         </div>
     </div>
