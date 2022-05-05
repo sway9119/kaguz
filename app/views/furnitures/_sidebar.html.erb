@@ -16,11 +16,16 @@
             <p><span class="bold">こだわりの条件</span>を指定する</p>
         </div>
         <div class="body">
-            <%= form_with(url: furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
+            <%= form_with(url: filter_search_furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
             <div class="detailed-search-head">素材</div>
             <div class="detailed-search-body">
-                <% @materials.each do |material| %>
-                    <div class="material-item"><%= f.check_box :material %><p><%= material %></p></div>
+                <%= f.collection_check_boxes(:material_ids, Material.all, :id, :name) do |b| %>
+                <label class="material-item">
+                <%= b.check_box do %>
+                    <%= b.check_box + b.text %>
+                <% end %>
+                    <%= b.label {b.text}%>
+                </label>
                 <% end %>
             </div>
             <div class="detailed-search-head">色</div>

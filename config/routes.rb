@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :furnitures do
     get :category_search, on: :collection
     get :scene_search, on: :collection
+    get :filter_search, on: :collection
   end
 
   resources :workshops

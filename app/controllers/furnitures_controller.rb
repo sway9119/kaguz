@@ -22,6 +22,11 @@ class FurnituresController < ApplicationController
         render 'index'
     end
 
+    def filter_search
+        @furnitures = Furniture.where(material_id: params[:material_ids])
+        render 'index'
+    end
+
     def get_categories_for_sidebar
         @categories_hash = Furniture.joins(:category).select("category_id, categories.name as category_name, count(*) as category_count").group(:category_id, :category_name)
     end
@@ -90,6 +95,6 @@ class FurnituresController < ApplicationController
     private
 
     def furniture_params
-        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[])
+        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[], materil_ids:[])
     end
 end

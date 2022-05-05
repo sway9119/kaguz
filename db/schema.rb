@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_22_121912) do
+ActiveRecord::Schema.define(version: 2022_05_04_093147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 2022_02_22_121912) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "furniture_materials", force: :cascade do |t|
+    t.integer "furniture_id", null: false, comment: "家具ID"
+    t.integer "material_id", null: false, comment: "素材ID"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "furniture_scenes", force: :cascade do |t|
     t.integer "furniture_id", null: false, comment: "家具ID"
     t.integer "scene_id", null: false, comment: "シーンID"
@@ -42,6 +49,13 @@ ActiveRecord::Schema.define(version: 2022_02_22_121912) do
     t.datetime "updated_at", null: false
     t.string "image", comment: "画像"
     t.integer "category_id", comment: "カテゴリーID"
+    t.integer "material_id", comment: "素材ID"
+  end
+
+  create_table "materials", force: :cascade do |t|
+    t.string "name", null: false, comment: "素材名称"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "notifications", force: :cascade do |t|
