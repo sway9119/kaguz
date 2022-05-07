@@ -1,0 +1,2 @@
+class FurnitureColor < ApplicationRecord
+end

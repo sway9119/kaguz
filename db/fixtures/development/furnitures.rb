@@ -4,6 +4,7 @@ Furniture.seed do |s|
     s.category_id = '1'
     s.image  = ''
     s.material_id  = '1'
+    s.color_id  = '1'
 end
 
 Furniture.seed do |s|
@@ -12,6 +13,7 @@ Furniture.seed do |s|
     s.category_id = '2'
     s.image  = ''
     s.material_id  = '2'
+    s.color_id  = '2'
 end
 
 Furniture.seed do |s|
@@ -20,6 +22,7 @@ Furniture.seed do |s|
     s.category_id = '3'
     s.image  = ''
     s.material_id  = '3'
+    s.color_id  = '3'
 end
 
 Furniture.seed do |s|
@@ -28,6 +31,7 @@ Furniture.seed do |s|
     s.category_id = '4'
     s.image  = ''
     s.material_id  = '4'
+    s.color_id  = '4'
 end
 
 Furniture.seed do |s|
@@ -36,4 +40,5 @@ Furniture.seed do |s|
     s.category_id = '5'
     s.image  = ''
     s.material_id  = '5'
+    s.color_id  = '5'
 end

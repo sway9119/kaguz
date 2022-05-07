@@ -23,7 +23,7 @@ class FurnituresController < ApplicationController
     end
 
     def filter_search
-        @furnitures = Furniture.where(material_id: params[:material_ids])
+        @furnitures = Furniture.where(material_id: params[:material_ids], color_id: params[:color_ids])
         render 'index'
     end
 
@@ -95,6 +95,6 @@ class FurnituresController < ApplicationController
     private
 
     def furniture_params
-        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[], materil_ids:[])
+        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[], materil_ids:[], color_ids:[])
     end
 end
