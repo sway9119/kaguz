@@ -257,65 +257,71 @@
     font-weight: 700;
   }
 }
-.sidebar-color {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-left: 10px;
-}
-.sidebar-color_red {
-  background-color: red;
-}
-.sidebar-color_orange {
-  background-color: orange;
-}
-.sidebar-color_yellow {
-  background-color: yellow;
-}
-.sidebar-color_green {
-  background-color: green;
-}
-.sidebar-color_blue {
-  background-color: blue;
-}
-.sidebar-color_purple {
-  background-color: purple;
-}
-.sidebar-color_pink {
-  background-color: pink;
-}
-.sidebar-color_brown {
-  background-color: brown;
-}
-.sidebar-color_brown {
-  background-color: brown;
-}
-.sidebar-color_beige {
-  background-color: beige;
-}
-.sidebar-color_white {
-  background-color: white;
-}
-.sidebar-color_grey {
-  background-color: grey;
-}
-.sidebar-color_black {
-  background-color: black;
-}
-.sidebar-color_gold {
-  background-color: gold;
-}
-.sidebar-color_clear {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 224, 255, 0.46) 0%,
-    rgba(0, 224, 255, 0) 100%
-  );
-}
-.sidebar-color_multi {
-  background: linear-gradient(
-    180deg,
-    rgba(5, 0, 255, 0.56) 0%,
-    rgba(5, 0, 255, 0) 100%
-  );
+.color-item {
+  display: flex;
+  label {
+    margin: 0 0 0 8px;
+  }
+  .sidebar-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  .sidebar-color_red {
+    background-color: red;
+  }
+  .sidebar-color_orange {
+    background-color: orange;
+  }
+  .sidebar-color_yellow {
+    background-color: yellow;
+  }
+  .sidebar-color_green {
+    background-color: green;
+  }
+  .sidebar-color_blue {
+    background-color: blue;
+  }
+  .sidebar-color_purple {
+    background-color: purple;
+  }
+  .sidebar-color_pink {
+    background-color: pink;
+  }
+  .sidebar-color_brown {
+    background-color: brown;
+  }
+  .sidebar-color_brown {
+    background-color: brown;
+  }
+  .sidebar-color_beige {
+    background-color: beige;
+  }
+  .sidebar-color_white {
+    background-color: white;
+  }
+  .sidebar-color_grey {
+    background-color: grey;
+  }
+  .sidebar-color_black {
+    background-color: black;
+  }
+  .sidebar-color_gold {
+    background-color: gold;
+  }
+  .sidebar-color_clear {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 224, 255, 0.46) 0%,
+      rgba(0, 224, 255, 0) 100%
+    );
+  }
+  .sidebar-color_multi {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 0, 255, 0.56) 0%,
+      rgba(5, 0, 255, 0) 100%
+    );
+  }
 }

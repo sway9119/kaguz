@@ -30,12 +30,15 @@
             </div>
             <div class="detailed-search-head">色</div>
             <div class="detailed-search-body">
-                <% @colors_hash.each do |color| %>
-                    <div class="color-item">
-                        <%= f.check_box :color %>
-                        <span class="<%= color[:klass] %>"></span>
-                        <p><%= color[:name] %></p>
-                    </div>
+                <%= f.collection_check_boxes(:color_ids, Color.all, :id, :name, checked: true) do |b| %>
+                <label class="color-item">
+                <%= b.check_box do %>
+                    <div class="sidebar-color <%= b.object.css_class_name %>"></div>
+                    <%= b.check_box + b.text %>
+                <% end %>
+                    <div class="sidebar-color <%= b.object.css_class_name %>"></div>
+                    <%= b.label {b.text}%>
+                </label>
                 <% end %>
             </div>
             <div class="detailed-search-head">サイズ</div>

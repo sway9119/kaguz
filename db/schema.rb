@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_06_081717) do
+ActiveRecord::Schema.define(version: 2022_05_06_090032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_05_06_081717) do
     t.string "name", null: false, comment: "素材名称"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "css_class_name", comment: "CSSクラス名"
   end
 
   create_table "furniture_colors", force: :cascade do |t|
