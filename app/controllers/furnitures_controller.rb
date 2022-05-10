@@ -23,7 +23,21 @@ class FurnituresController < ApplicationController
     end
 
     def filter_search
-        @furnitures = Furniture.where(material_id: params[:material_ids], color_id: params[:color_ids])
+        # blankの判定のために、空文字を取り除く
+        material_ids = params[:material_ids].reject(&:empty?)
+        color_ids = params[:color_ids].reject(&:empty?)
+
+        # TODO: フィルタリング項目が増えると複雑となるため、後日リファクする
+        if material_ids.blank? && color_ids.blank?
+            @furnitures = Furniture.all
+        elsif material_ids.present? && color_ids.present?
+            @furnitures = Furniture.where(material_id: material_ids)
+            .where(color_id: color_ids)
+        elsif material_ids.present?
+            @furnitures = Furniture.where(material_id: material_ids)
+        elsif params[:color_ids].present?
+            @furnitures = Furniture.where(color_id: color_ids)
+        end
         render 'index'
     end
 
@@ -95,6 +109,6 @@ class FurnituresController < ApplicationController
     private
 
     def furniture_params
-        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[], materil_ids:[], color_ids:[])
+        params.require(:furniture).permit(:name, :image, :category_id, scene_ids:[], material_ids:[], color_ids:[])
     end
 end

@@ -19,7 +19,7 @@
             <%= form_with(url: filter_search_furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
             <div class="detailed-search-head">素材</div>
             <div class="detailed-search-body">
-                <%= f.collection_check_boxes(:material_ids, Material.all, :id, :name) do |b| %>
+                <%= f.collection_check_boxes(:material_ids, Material.all, :id, :name, checked: params[:material_ids]) do |b| %>
                 <label class="material-item">
                 <%= b.check_box do %>
                     <%= b.check_box + b.text %>
@@ -30,7 +30,7 @@
             </div>
             <div class="detailed-search-head">色</div>
             <div class="detailed-search-body">
-                <%= f.collection_check_boxes(:color_ids, Color.all, :id, :name, checked: true) do |b| %>
+                <%= f.collection_check_boxes(:color_ids, Color.all, :id, :name, checked: params[:color_ids]) do |b| %>
                 <label class="color-item">
                 <%= b.check_box do %>
                     <div class="sidebar-color <%= b.object.css_class_name %>"></div>
