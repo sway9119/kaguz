@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     get :category_search, on: :collection
     get :scene_search, on: :collection
     get :filter_search, on: :collection
+    get :keyword_search, on: :collection
   end
 
   resources :workshops

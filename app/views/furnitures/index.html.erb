@@ -12,7 +12,7 @@
         <%= render 'sidebar' %>
         <div class="contents">
             <div class="keyword-search">
-                <%= form_with(url: furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
+                <%= form_with(url: keyword_search_furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
                 <%= f.text_field :keyword, placeholder: 'キーワード', class: 'input-box' %>
                 <div class="search-button">
                     <%= image_submit_tag("icon/furnitures/search_white_icon.png", class: 'submit') %>

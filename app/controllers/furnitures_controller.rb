@@ -1,8 +1,6 @@
 class FurnituresController < ApplicationController
     before_action :get_categories_for_sidebar
     before_action :get_scenes_for_sidebar
-    before_action :get_material_for_sidebar
-    before_action :get_color_for_sidebar
 
     layout "application"
 
@@ -41,8 +39,9 @@ class FurnituresController < ApplicationController
         render 'index'
     end
 
-    def keyword_search 
-
+    def keyword_search
+        @furnitures = Furniture.where(name: params[:keyword])
+        render 'index'
     end
 
     def get_categories_for_sidebar
