@@ -40,7 +40,7 @@ class FurnituresController < ApplicationController
     end
 
     def keyword_search
-        @furnitures = Furniture.where(name: params[:keyword])
+        @furnitures = Furniture.where('name LIKE ?', "%#{params[:keyword]}%")
         render 'index'
     end
 
