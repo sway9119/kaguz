@@ -5,6 +5,7 @@ Furniture.seed do |s|
     s.image  = ''
     s.material_id  = '1'
     s.color_id  = '1'
+    s.short_message = "これはテスト1の家具です"
 end
 
 Furniture.seed do |s|
@@ -14,6 +15,7 @@ Furniture.seed do |s|
     s.image  = ''
     s.material_id  = '2'
     s.color_id  = '2'
+    s.short_message = "これはテスト2の家具です"
 end
 
 Furniture.seed do |s|
@@ -23,6 +25,7 @@ Furniture.seed do |s|
     s.image  = ''
     s.material_id  = '3'
     s.color_id  = '3'
+    s.short_message = "これはテスト3の家具です"
 end
 
 Furniture.seed do |s|
@@ -32,6 +35,7 @@ Furniture.seed do |s|
     s.image  = ''
     s.material_id  = '4'
     s.color_id  = '4'
+    s.short_message = "これはテスト4の家具です"
 end
 
 Furniture.seed do |s|
@@ -41,4 +45,5 @@ Furniture.seed do |s|
     s.image  = ''
     s.material_id  = '5'
     s.color_id  = '5'
+    s.short_message = "これはテスト5の家具です"
 end
