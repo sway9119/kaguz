@@ -1,6 +1,7 @@
 <div class="furnitures furnitures_index">
     <% breadcrumb :furnitures_search %>
     <%= breadcrumbs separator: " &rsaquo; " %>
+    <%= params %>
     <div class="title">
         <% if @category != nil %>
         <h1><%= @category.name %></h1>
@@ -44,7 +45,7 @@
                         <%= image_tag "https://placehold.jp/250x170.png", class: "bd-placeholder-img item-image", size: "250x170" %>
                     <% end %>
                     <p class="item-title"><%= furniture.name %></p>
-                    <p class="item-text"><%= furniture.short_message %></p>
+                    <p class="item-short-message"><%= furniture.short_message %></p>
                     </a>
                 <% end %>
                 </div>
