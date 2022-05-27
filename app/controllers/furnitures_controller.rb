@@ -33,6 +33,34 @@ class FurnituresController < ApplicationController
         if color_ids.present?
             @furnitures = @furnitures.where(color_id: color_ids)
         end
+
+        size_width_from = params[:size_width_from]
+        if size_width_from.present?
+            @furnitures = @furnitures.where("width >= #{size_width_from}")
+        end
+        size_width_to = params[:size_width_to]
+        if size_width_to.present?
+            @furnitures = @furnitures.where("width <= #{size_width_to}")
+        end
+
+        size_height_from = params[:size_height_from]
+        if size_height_from.present?
+            @furnitures = @furnitures.where("height >= #{size_height_from}")
+        end
+        size_height_to = params[:size_height_to]
+        if size_height_to.present?
+            @furnitures = @furnitures.where("height <= #{size_height_to}")
+        end
+
+        size_depth_from = params[:size_depth_from]
+        if size_depth_from.present?
+            @furnitures = @furnitures.where("depth >= #{size_depth_from}")
+        end
+        size_depth_to = params[:size_depth_to]
+        if size_depth_to.present?
+            @furnitures = @furnitures.where("depth <= #{size_depth_to}")
+        end
+
         render 'index'
     end
 
