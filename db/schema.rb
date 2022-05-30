@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_26_141344) do
+ActiveRecord::Schema.define(version: 2022_05_30_102612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2022_05_26_141344) do
     t.integer "width", comment: "幅"
     t.integer "height", comment: "高さ"
     t.integer "depth", comment: "奥行き"
+    t.integer "price", comment: "価格"
   end
 
   create_table "materials", force: :cascade do |t|

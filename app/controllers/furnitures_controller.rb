@@ -61,6 +61,15 @@ class FurnituresController < ApplicationController
             @furnitures = @furnitures.where("depth <= #{size_depth_to}")
         end
 
+        price_from = params[:price_from]
+        if price_from.present?
+            @furnitures = @furnitures.where("price >= #{price_from}")
+        end
+        price_to = params[:price_to]
+        if price_to.present?
+            @furnitures = @furnitures.where("price <= #{price_to}")
+        end        
+
         render 'index'
     end
 

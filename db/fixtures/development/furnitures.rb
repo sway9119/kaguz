@@ -9,6 +9,7 @@ Furniture.seed do |s|
     s.width = 10
     s.height = 100
     s.depth = 1000
+    s.price = 11111
 end
 
 Furniture.seed do |s|
@@ -22,6 +23,7 @@ Furniture.seed do |s|
     s.width = 20
     s.height = 200
     s.depth = 2000
+    s.price = 22222
 end
 
 Furniture.seed do |s|
@@ -35,6 +37,7 @@ Furniture.seed do |s|
     s.width = 30
     s.height = 300
     s.depth = 3000
+    s.price = 33333
 end
 
 Furniture.seed do |s|
@@ -48,6 +51,7 @@ Furniture.seed do |s|
     s.width = 40
     s.height = 400
     s.depth = 4000
+    s.price = 44444
 end
 
 Furniture.seed do |s|
@@ -61,4 +65,5 @@ Furniture.seed do |s|
     s.width = 50
     s.height = 500
     s.depth = 5000
+    s.price = 55555
 end
