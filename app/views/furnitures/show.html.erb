@@ -86,7 +86,12 @@
                         <p>和服を沢山お持ちの方からのご依頼で製作しました。押入れの片側が和服専用の収納になっています。桐の盆は既製の物より少し大きめに作り、お盆ごと引き出せる様になっています。</p>
                     </div>
                     <div id="furniture-size" class="tab-pane fade">
-                        <p>h: 100, w: 80, d: 60</p>
+                        <ul>
+                            <li>幅: <%= @furniture.width %></li>
+                            <li>高さ: <%= @furniture.height %></li>
+                            <li>奥行き: <%= @furniture.depth %></li>
+                        </ul>
+                        
                     </div>
                 </div>
             </div>
