@@ -103,6 +103,8 @@ class FurnituresController < ApplicationController
 
     def show
         @furniture = Furniture.find(params[:id])
+        # @related_furnitures = Furniture.where(category_id: @furniture.category_id)
+        @related_furnitures = Furniture.all.limit(6)
     end
 
     private
