@@ -23,8 +23,8 @@
                     <% else %>
                         <%= image_tag "https://placehold.jp/140x100.png", class: "furnitue-image", size: "140x100" %>
                     <% end %>
-                        <p class="furniture-title">ソファ</p>
-                        <p class="furniture-text">これはソファです。</p>
+                        <p class="furniture-title"><%= furniture.name %></p>
+                        <p class="furniture-text"><%= furniture.short_message %></p>
                     </a>
                     <% end %>
                 </div>
