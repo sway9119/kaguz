@@ -15,7 +15,7 @@ COPY Gemfile /kaguz/Gemfile
 COPY Gemfile.lock /kaguz/Gemfile.lock
 
 # Install Bundler and update RubyGems
-RUN gem install bundler:2.3.7
+RUN gem install bundler
 RUN gem update --system
 
 # Copy the entire application into the container
@@ -35,6 +35,6 @@ ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
 # Start the Rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# CMD ["rails", "server", "-b", "0.0.0.0"]
 
 
