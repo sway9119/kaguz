@@ -44,6 +44,10 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'seed-fu'
+  gem 'solargraph' # コード補完およびコード解析ツール
+  gem 'rubocop', require: false # コードスタイルおよびコーディング規約の自動検証を行う静的解析ツール
+  gem 'rubocop-rails', require: false #Rails用の静的解析
+  gem 'rubocop-performance', require: false # パフォーマンス解析
 end
 
 group :test do
