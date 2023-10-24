@@ -1,0 +1,129 @@
+<div id='home'>
+    <%= render 'home/header' %>
+    <div class="home-eyecatch">
+        <div class="home-search-boxs">
+            <div class="home-search-box">
+                <div class="text-box first-box">
+                    <p class="title">カテゴリ</p>
+                    <p class="text">作りたい家具のイメージを選んでみましょう</p>
+                </div>
+            </div>
+            <div class="home-search-box middle-box">
+                <div class="text-box">
+                    <p class="title">地域選択</p>
+                    <p class="text">お住まいのエリア</p>
+                </div>
+            </div>
+            <div class="home-search-box last-box">
+                <div class="text-box">
+                    <p class="title">ご予算</p>
+                    <p class="text">価格帯を選んでください</p>                
+                </div>
+            </div>
+            <div class="search_button">
+                <%= image_tag 'icon/search.png' %>
+            </div>
+        </div>
+        <div class="home-search-ex-box">
+            <p>もっと柔軟にさがしたい</p>
+            <button>柔軟な検索</button>
+        </div>
+    </div>
+    <div class='home-description'>
+        <div class='home-description-title'>
+            <p>オーダー家具で、<br> 自分らしい暮らしをしよう</p>
+        </div>
+        <div class='home-description-contents'>
+            <p>Kaguzではオーダー家具の発注をかんたんにできます。Kaguzではオーダー家具の発注をかんたんにできます。Kaguzではオーダー家具の発注をかんたんにできます。Kaguzではオーダー家具の発注をかんたんにできます。Kaguzではオーダー家具の発注をかんたんにできます。Kaguzではオーダー家具の発注をかんたんにできます。Kaguzではオーダー家具の発注をかんたんにできます。</p>
+            <div class="link-container">
+                <%= link_to 'Kaguzについてもっと知る', '#' %>
+            </div>
+        </div>
+    </div>
+    <div class="home-category">
+        <h2>カテゴリ</h2>
+        <div class="category-containers">
+            <div class="category-container">
+                <%= image_tag 'lp/img_ctg_sofa.png' %>
+                <div class="category-propatys">
+                    <%= link_to "ソファ・椅子", category_search_furnitures_path(category_id: "1"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+            <div class="category-container">
+                <%= image_tag 'lp/img_ctg_table.png' %>
+                <div class="category-propatys">
+                    <%= link_to "テーブル", category_search_furnitures_path(category_id: "2"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+            <div class="category-container">
+                <%= image_tag 'lp/img_ctg_bed.png' %>
+                <div class="category-propatys">
+                    <%= link_to "ベッド", category_search_furnitures_path(category_id: "3"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+            <div class="category-container at-last">
+                <%= image_tag 'lp/img_ctg_cabi.png' %>
+                <div class="category-propatys">
+                    <%= link_to "収納・キャビネット", category_search_furnitures_path(category_id: "4"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+            <div class="category-container">
+                <%= image_tag 'lp/img_ctg_door.png' %>
+                <div class="category-propatys">
+                    <%= link_to "ドア", category_search_furnitures_path(category_id: "5"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+                <div class="category-container">
+                <%= image_tag 'lp/img_ctg_floor.png' %>
+                <div class="category-propatys">
+                    <%= link_to "フローリング", category_search_furnitures_path(category_id: "6"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+                <div class="category-container">
+                <%= image_tag 'lp/img_ctg_towel.png' %>
+                <div class="category-propatys">
+                    <%= link_to "タオル掛け", category_search_furnitures_path(category_id: "7"), class:"category-name" %>
+                    <div class="category-counts">(120)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-scene">
+        <h2>利用シーンで選ぶ</h2>
+        <div class="scene-containers">
+            <div class="scene-container">
+                <%= image_tag 'lp/img_bedroom.png'%>
+                <%= link_to "寝室", scene_search_furnitures_path(scene_id: "1") %>
+            </div>
+            <div class="scene-container">
+                <%= image_tag 'lp/img_kitchen.png'%>
+                <%= link_to "キッチン・ダイニング", scene_search_furnitures_path(scene_id: "2") %>
+            </div>
+            <div class="scene-container">
+                <%= image_tag 'lp/img_work.png'%>
+                <%= link_to "仕事", scene_search_furnitures_path(scene_id: "3") %>
+            </div>
+            <div class="scene-container">
+                <%= image_tag 'lp/img_living.png'%>
+                <%= link_to "リビング", scene_search_furnitures_path(scene_id: "4") %>
+            </div>
+        </div>
+    </div>
+    <div class="home-partner">
+        <div class="partner-container">
+            <%= image_tag 'lp/img_partner.png'%>
+            <div class="partner-box">
+                <h2>パートナー・工場募集</h2>
+                <p>工場として発注を受けることもできます。</p>
+                <%= link_to '詳細を見る', '#' %>
+            </div>
+        </div>
+    </div>
+    <%= render 'shared/footer' %>
+</div>

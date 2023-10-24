@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Rails",
+      "type": "rdbg",
+      "request": "launch",
+      // "command": "bundle exec rails", //# bundle exec rails だとデバッガで止まらない
+      "command": "bin/rails",
+      "script": "s",
+      "args": ["-b", "0.0.0.0"]
+    },
+    {
+      "name": "Debug Rspec with current file",
+      "type": "rdbg",
+      "request": "launch",
+      "command": "bundle exec rspec",
+      "script": "${file}",
+      "args": [],
+      "askParameters": true // 実行コマンドをウインドウで確認。特定の行を実行するなど調整可能にする
+    }
+  ]
+}

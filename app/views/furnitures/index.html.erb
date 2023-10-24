@@ -1,0 +1,55 @@
+<div class="furnitures furnitures_index">
+    <% breadcrumb :furnitures_search %>
+    <%= breadcrumbs separator: " &rsaquo; " %>
+    <%= params %>
+    <div class="title">
+        <% if @category != nil %>
+        <h1><%= @category.name %></h1>
+        <% elsif @scene != nil %>
+        <h1><%= @scene.name %></h1>
+        <% end %>
+    </div>
+    <div class="main">
+        <%= render 'sidebar' %>
+        <div class="contents">
+            <div class="keyword-search">
+                <%= form_with(url: keyword_search_furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
+                <%= f.text_field :keyword, placeholder: 'キーワード', class: 'input-box' %>
+                <div class="search-button">
+                    <%= image_submit_tag("icon/furnitures/search_white_icon.png", class: 'submit') %>
+                </div>
+                <% end %>
+            </div>
+            <div class="contents-head">
+                <div class="item-counts">1~<%= @furnitures.size %> 件を表示</div>
+                <div class="item-sort">
+                    <div class="item-sort-recomend current-sort">おすすめ順</div>
+                    <div class="item-sort-new">新着順</div>
+                    <div class="item-sort-popularity">人気順</div>
+                </div>
+            </div>
+            <div class="contents-body">
+                <div class="item-boxs">
+                <% i = 0 %>
+                <% @furnitures.each do |furniture| %>
+                    <% i += 1 %>
+                    <% if i == 3 %>
+                    <a href="/furnitures/<%= furniture.id %>" class="item-box last-child">
+                    <% i = 0 %>
+                    <% else %>
+                    <a href="/furnitures/<%= furniture.id %>" class="item-box">
+                    <% end %>
+                    <% if furniture.image.present? %>
+                        <%= image_tag furniture.image_url, class: "bd-placeholder-img item-image", size: "250x170" %>
+                    <% else %>
+                        <%= image_tag "https://placehold.jp/250x170.png", class: "bd-placeholder-img item-image", size: "250x170" %>
+                    <% end %>
+                    <p class="item-title"><%= furniture.name %></p>
+                    <p class="item-short-message"><%= furniture.short_message %></p>
+                    </a>
+                <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

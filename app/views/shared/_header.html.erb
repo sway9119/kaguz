@@ -1,0 +1,24 @@
+<header class="navbar">
+    <div class="nav-box">
+        <a class="navbar-brand" href="#">Kaguz</a>
+    </div>
+    <div class="search-box">
+        <%= form_with(url: furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
+        <%= f.text_field :keyword, placeholder: 'すべての家具からさがす', class: 'input-box' %>
+        <div class="search-button">
+            <%= image_submit_tag("icon/furnitures/search.png", class: 'search-icon') %>
+        </div>
+        <% end %>
+    </div>
+    <div class="nav-box">
+        <% if logged_in? %>
+        <div class="nav-item"><%= link_to current_user.name + "さん", mypage_path %></div>
+        <div class="nav-item"><%= link_to "お知らせ", notifications_path %></div>
+        <div class="nav-item"><%= link_to "ログアウト", logout_path, method: :delete %></div>
+        <% else %>
+        <div class="nav-item"><%= link_to "ログイン", login_path %></div>
+        <div class="nav-item"><%= link_to "新規登録", signup_path, class: "bold"%></div>
+        <%= link_to "掲載する", signup_path, class: "nav-item partner" %>
+        <% end %>
+    </div>
+</header>

@@ -1,17 +1,40 @@
-FROM ruby:2.5
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-# kaguzと書かれている部分はディレクトリ名に応じて変更します。
+# Use the official Ruby image as a base image
+FROM ruby:3.1.4
+
+# Update the package manager and install necessary dependencies
+RUN apt-get update -qq && apt-get install -y \
+    nodejs \
+    postgresql-client \
+    imagemagick
+
+# Set the working directory within the container
 WORKDIR /kaguz
+
+# Copy the Gemfile and Gemfile.lock into the container
 COPY Gemfile /kaguz/Gemfile
 COPY Gemfile.lock /kaguz/Gemfile.lock
-RUN bundle install
+
+# Install Bundler and update RubyGems
+RUN gem install bundler
+RUN gem update --system
+
+# Copy the entire application into the container
 COPY . /kaguz
 
-# Add a script to be executed every time the container starts.
+# Install the application's gems
+RUN bundle install
+
+# Copy the entrypoint script and make it executable
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
+
+# Specify the script to run when the container starts
 ENTRYPOINT ["entrypoint.sh"]
+
+# Expose the port on which the application will run
 EXPOSE 3000
 
-# Configure the main process to run when running the image
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# Start the Rails server
+# CMD ["rails", "server", "-b", "0.0.0.0"]
+
+

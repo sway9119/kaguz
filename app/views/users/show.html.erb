@@ -1,0 +1,11 @@
+<h1>マイページ</h1>
+<h2>ユーザー情報</h2>
+<div><%= @user.name %></div>
+<div><%= @user.email %></div>
+<hr>
+<h2>工房情報</h2>
+<ul>
+    <% @workshops.each do |workshop| %>
+    <li><%= link_to workshop.name, workshop_path(workshop.id) %></li>
+    <% end %>
+</ul>

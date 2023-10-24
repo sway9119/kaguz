@@ -1,0 +1,248 @@
+.workshops {
+  padding: 0 70px;
+  display: flex;
+  justify-content: center;
+  .contents {
+    width: 100%;
+    .content1 {
+      h2 {
+        margin-top: 16px;
+        font-family: "Noto Sans";
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 144.4%;
+      }
+      .workshop-images {
+        margin-top: 40px;
+        .main-images {
+          .main-image {
+            width: 627px;
+            height: 437px;
+            border-radius: 4px;
+            border: solid 1px #ddd;
+          }
+        }
+        .sub-images {
+          margin-top: 28px;
+          .sub-image {
+            width: 92px;
+            height: 64px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    .content2 {
+      display: flex;
+      .main {
+        width: 600px;
+        padding: 16px;
+        margin-top: 12px;
+        margin-right: 74px;
+        .workshop-discription {
+          h3 {
+            margin-top: 16px;
+            border-left: solid 6px #ffa800;
+            padding-left: 8px;
+            font-family: "Noto Sans";
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #413e3e;
+          }
+          .workshop-discription-text {
+            margin-top: 16px;
+            height: 270px;
+            font-family: "Noto Sans";
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #413e3e;
+          }
+        }
+        .workshop-record {
+          margin-top: 27px;
+          h3 {
+            border-left: solid 6px #ffa800;
+            padding-left: 8px;
+            font-family: "Noto Sans";
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #413e3e;
+          }
+          .furniture-boxs {
+            margin-top: 19px;
+            display: flex;
+            flex-wrap: wrap;
+            .furniture-box {
+              margin: 16px 16px 8px 0;
+              .furniture-title {
+                margin: 16px 0 0 0;
+                font-family: "Noto Sans JP";
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                color: #413e3e;
+              }
+              .furniture-text {
+                margin: 8px 0 0 0;
+                font-family: "Noto Sans JP";
+                font-size: 14px;
+                line-height: 20px;
+                color: #413e3e;
+              }
+            }
+          }
+        }
+        .related-workshops {
+          margin-top: 40px;
+          margin-bottom: 300px;
+          width: 627px;
+          h3 {
+            border-left: solid 6px #ffa800;
+            padding-left: 8px;
+            font-family: "Noto Sans";
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            color: #413e3e;
+          }
+          .workshop-boxs {
+            margin-top: 29px;
+            display: flex;
+            flex-wrap: wrap;
+            .workshop-box {
+              margin: 16px 16px 8px 0;
+              .workshop-title {
+                margin: 16px 0 0 0;
+                font-family: "Noto Sans JP";
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                color: #413e3e;
+              }
+              .workshop-text {
+                margin: 8px 0 0 0;
+                font-family: "Noto Sans JP";
+                font-size: 14px;
+                line-height: 20px;
+                color: #413e3e;
+              }
+            }
+          }
+        }
+      }
+      .sub {
+        padding: 22px;
+        .buttons {
+          display: inline-flex;
+          flex-direction: column;
+          width: 327px;
+          border-bottom: solid 1px #c4c4c4;
+          .inquiry {
+            margin-bottom: 46px;
+            height: 50px;
+            background-color: #ffa800;
+            border-radius: 4px;
+            border: none;
+            font-family: "Noto Sans";
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #ffffff;
+          }
+          .see-later {
+            margin-bottom: 46px;
+            border: 1px solid #717171;
+            box-sizing: border-box;
+            border-radius: 24px;
+            height: 50px;
+            background-color: #ffffff;
+            img {
+              margin-right: 21px;
+            }
+          }
+        }
+        .workshop-info {
+          margin-top: 27px;
+          p {
+            font-family: "Noto Sans JP";
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          .workshop-info-name-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-name {
+              margin: 0 0 0 33px;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+          .workshop-info-tel-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-tel {
+              margin: 0 0 0 13px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+          .workshop-info-url-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-url {
+              margin: 0 0 0 13px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+          .workshop-info-address-box {
+            display: flex;
+            margin-top: 33px;
+            .workshop-address {
+              margin: 0 0 0 13px;
+              display: flex;
+              align-items: center;
+              font-family: "Noto Sans JP";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+          }
+          .workshop-info-map-box {
+            margin-top: 18px;
+            #map {
+              width: 390px;
+              height: 294px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,333 @@
+.furnitures_show {
+  .contents {
+    margin-top: 40px;
+    display: flex;
+
+    .main-content {
+      margin-bottom: 400px;
+      .main-image {
+        width: 627px;
+        height: 437px;
+
+        border-radius: 4px;
+        border: solid 1px #ddd;
+      }
+      .sub-images {
+        margin-top: 28px;
+        .sub-image {
+          width: 92px;
+          height: 64px;
+          margin-right: 16px;
+        }
+      }
+      .label-related-furnitures {
+        margin-top: 40px;
+        padding: 16px;
+        width: 627px;
+        h3 {
+          border-left: solid 6px #ffa800;
+          padding-left: 8px;
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .furniture-boxs {
+          margin-top: 19px;
+          display: flex;
+          flex-wrap: wrap;
+          .furniture-box {
+            margin: 16px 16px 8px 0;
+            .furniture-title {
+              margin: 16px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+            .furniture-text {
+              margin: 8px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+          }
+        }
+      }
+      .label-related-workshops {
+        margin-top: 40px;
+        padding: 16px;
+        width: 627px;
+        h3 {
+          border-left: solid 6px #ffa800;
+          padding-left: 8px;
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .workshop-boxs {
+          margin-top: 29px;
+          display: flex;
+          flex-wrap: wrap;
+          .workshop-box {
+            margin: 16px 16px 8px 0;
+            .workshop-title {
+              margin: 16px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+            .workshop-text {
+              margin: 8px 0 0 0;
+              font-family: "Noto Sans JP";
+              font-size: 14px;
+              line-height: 20px;
+              color: #413e3e;
+            }
+          }
+        }
+      }
+    }
+    .sub-content {
+      margin-left: 40px;
+      .label-category {
+        display: flex;
+        height: max-content;
+        .label-category-icon {
+          width: 22px;
+          height: 18px;
+          margin-right: 25px;
+        }
+        .label-category-name {
+          margin-bottom: 0;
+          width: 56px;
+          height: 19px;
+          font-family: "Noto Sans";
+          font-size: 14px;
+          line-height: 19px;
+          color: #413e3e;
+        }
+      }
+      .label-tag {
+        display: flex;
+        align-items: center;
+        height: max-content;
+        margin-top: 22px;
+        .label-tag-icon {
+          width: 22px;
+          height: 22px;
+          margin-right: 25px;
+        }
+        .label-tag-name {
+          margin-right: 8px;
+          padding: 3px 16px;
+          border: 1px solid #717171;
+          box-sizing: border-box;
+          border-radius: 24px;
+          font-family: "SF Pro Display";
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+      .label-title {
+        margin-top: 16px;
+        .label-title-name {
+          font-family: Noto Sans;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 33px;
+        }
+      }
+      .label-like {
+        height: 20px;
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        .text {
+          margin-bottom: 0;
+          width: 126px;
+          font-family: "Noto Sans JP";
+          font-size: 14px;
+          line-height: 20px;
+          color: #717171;
+        }
+        .label-like-counts {
+          margin-left: 24px;
+          font-family: "Open Sans";
+          font-size: 14px;
+          line-height: 19px;
+          color: #413e3e;
+        }
+      }
+      .label-reference_price {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        .text {
+          margin-bottom: 0;
+          width: 126px;
+          font-family: "Noto Sans JP";
+          font-size: 14px;
+          line-height: 20px;
+          color: #717171;
+        }
+        .label-reference_price-value {
+          margin-left: 24px;
+          font-family: "Open Sans";
+          font-size: 14px;
+          line-height: 150%;
+          color: #413e3e;
+        }
+      }
+      .label-message {
+        margin-top: 47px;
+        width: 482px;
+        height: 174px;
+        background-color: rgba(196, 196, 196, 0.3);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        color: #413e3e;
+        padding: 15px 18px;
+        .label-message-value {
+        }
+      }
+      .label-status {
+        margin-top: 70px;
+        border-top: solid 1px #c4c4c4;
+        border-bottom: solid 1px #c4c4c4;
+        .label-status-value {
+          margin: 10px 16px;
+          font-size: 14px;
+          line-height: 19px;
+          font-family: "Noto Sans";
+          color: #413e3e;
+          display: flex;
+          align-items: center;
+          .status-message1 {
+            font-weight: 700;
+          }
+          .status-message2 {
+            margin-right: 14px;
+          }
+          .inquiry {
+            width: 170px;
+            height: 48px;
+            background: #ffa800;
+            color: #fff;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: Noto Sans;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            margin-right: 16px;
+          }
+        }
+      }
+      .label-discription {
+        margin-top: 72px;
+        .nav {
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 19px;
+          color: #413e3e;
+
+          .nav-item {
+            a {
+              width: 142px;
+              height: 58px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #ddd;
+              border: 1px solid #c4c4c4;
+              border-radius: 4px 4px 0px 0px;
+              text-decoration: none;
+              color: #fff;
+              margin-right: 4px;
+            }
+            .active {
+              border-bottom: none;
+              background-color: #fff;
+              color: #413e3e;
+            }
+          }
+        }
+        .tab-content {
+          padding: 30px;
+          width: 440px;
+          height: 200px;
+        }
+      }
+      .label-workshop {
+        margin-top: 160px;
+        width: 464px;
+        h3 {
+          font-family: "Noto Sans";
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 33px;
+          color: #413e3e;
+        }
+        .label-workshop-card {
+          display: flex;
+          height: 160px;
+          background: #ffffff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          border-radius: 4px;
+          .label-workshop-card-image {
+          }
+          .label-workshop-card-box {
+            padding: 16px;
+            width: 100%;
+            position: relative;
+            .workshop-name {
+              font-family: "Noto Sans JP";
+              font-size: 18px;
+              line-height: 26px;
+              color: #413e3e;
+            }
+            .workshop-namekana {
+              font-family: "Noto Sans JP";
+              font-size: 12px;
+              line-height: 17px;
+              color: #413e3e;
+            }
+            .workshop-discription {
+              position: absolute;
+              bottom: 16px;
+              font-family: "Noto Sans";
+              font-size: 14px;
+              line-height: 19px;
+              color: #413e3e;
+            }
+          }
+        }
+        .lavel-workshop-link {
+          margin-top: 16px;
+          display: flex;
+          justify-content: flex-end;
+          margin-right: 16px;
+          .workshop-link {
+            font-family: "Noto Sans";
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            color: #4285f4;
+          }
+        }
+      }
+    }
+  }
+}

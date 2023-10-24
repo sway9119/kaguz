@@ -1,0 +1,101 @@
+<div class="workshops workshops_show">
+    <div class="contents">
+        <% breadcrumb :workshops_show %>
+        <%= breadcrumbs separator: " &rsaquo; " %>
+        <div class="content1">
+            <h2><%= @workshop.name %></h2>
+            <div class="workshop-images">
+                <div class="main-images">
+                    <%= image_tag "workshop_eyecatch.png" %>
+                </div>
+                <div class="sub-images">
+                    <% for i in 1..4 do %>
+                    <img src="https://placehold.jp/92x64.png" class="sub-image">                    
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="content2">
+            <div class="main">
+                <div class="workshop-discription">
+                    <h3 class="workshop-discription-title">太郎木工のこだわり</h3>
+                    <div class="workshop-discription-text">
+                        太郎木工は、お客様の「思い」を形にする注文家具工房です。<br>
+                        探しても見つからなかった家具をお作りします。<br>
+                        <br>
+                        これまで店舗・オフィスの什器、テーブルや収納、高級鞄の下地など、長らく培ってきた確かな技術で「こういうのが欲しかった」と感じてもらえる家具をお作りします。<br>
+                        <br>
+                        まずは気軽にご相談ください。<br>
+                        川のほとりの工房でお待ちしています。<br>
+                        <br>
+                        太郎木工 代表　関 太郎
+                    </div>
+                </div>
+                <div class="workshop-record">
+                    <h3>制作実績</h3>
+                    <div class="furniture-boxs">
+                        <% i = 0 %>
+                        <% for i in 1..6 do %>
+                        <div class="furniture-box">
+                            <%= image_tag "https://placehold.jp/140x100.png", class: "furnitue-image" %>
+                            <p class="furniture-title">ソファ</p>
+                            <p class="furniture-text">これはソファです。</p>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="related-workshops">
+                    <h3>関連する工房</h3>
+                    <div class="workshop-boxs">
+                        <% i = 0 %>
+                        <% for i in 1..3 do %>
+                        <div class="workshop-box">
+                            <%= image_tag "https://placehold.jp/140x100.png", class: "furnitue-image" %>
+                            <p class="workshop-title">太郎木工</p>
+                            <p class="workshop-text">三鷹市</p>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <div class="sub">
+                <div class="buttons">
+                    <button class="inquiry">問い合わせる</button>
+                    <button class="see-later"><%= image_tag "icon/bookmark.png"%>後で見る</button>
+                </div>
+                <div class="workshop-info">
+                    <p>工場情報</p>
+                    <div class="workshop-info-name-box">
+                        <%= image_tag "https://placehold.jp/50x50.png", class: "workshop-image" %>
+                        <p class="workshop-name">太郎木工</p>
+                    </div>
+                    <div class="workshop-info-tel-box">
+                        <%= image_tag "icon/tel.png", class: "icon" %>
+                        <p class="workshop-tel">03-xxxx-xxxx</p>
+                    </div>
+                    <div class="workshop-info-url-box">
+                        <%= image_tag "icon/url.png", class: "icon" %>
+                        <p class="workshop-url">http://www.xxxxxxxx</p>
+                    </div>
+                    <div class="workshop-info-address-box">
+                        <%= image_tag "icon/pin.png", class: "icon" %>
+                        <p class="workshop-address">〒XXX-XXXX 東京都三鷹市WWX-XX-XX</p>
+                    </div>
+                    <div class="workshop-info-map-box">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function initMap(){
+  let map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: -34.397, lng: 150.644},
+  zoom: 8
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= Workshop::GOOGLE_API_KEY %>&callback=initMap" async defer></script>

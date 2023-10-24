@@ -1,0 +1,86 @@
+<div class="furnitures-sidebar">
+    <div class="search-box category-search">
+        <div class="head">
+            <p><span class="bold">カテゴリー</span>からさがす</p>
+        </div>
+        <div class="body">
+            <ul>
+                <% @categories_hash.each do |hash| %>
+                <li><%= link_to hash.category_name, controller: "furnitures", action: "category_search", category_id: hash.category_id %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    <div class="search-box detailed-search">
+        <div class="head">
+            <p><span class="bold">こだわりの条件</span>を指定する</p>
+        </div>
+        <div class="body">
+            <%= form_with(url: filter_search_furnitures_path, local: true, method: :get, class: "search-form") do |f| %>
+            <div class="detailed-search-head">素材</div>
+            <div class="detailed-search-body">
+                <%= f.collection_check_boxes(:material_ids, Material.all, :id, :name, checked: params[:material_ids]) do |b| %>
+                <label class="material-item">
+                <%= b.check_box do %>
+                    <%= b.check_box + b.text %>
+                <% end %>
+                    <%= b.label {b.text}%>
+                </label>
+                <% end %>
+            </div>
+            <div class="detailed-search-head">色</div>
+            <div class="detailed-search-body">
+                <%= f.collection_check_boxes(:color_ids, Color.all, :id, :name, checked: params[:color_ids]) do |b| %>
+                <label class="color-item">
+                <%= b.check_box do %>
+                    <div class="sidebar-color <%= b.object.css_class_name %>"></div>
+                    <%= b.check_box + b.text %>
+                <% end %>
+                    <div class="sidebar-color <%= b.object.css_class_name %>"></div>
+                    <%= b.label {b.text}%>
+                </label>
+                <% end %>
+            </div>
+            <div class="detailed-search-head">サイズ</div>
+            <div class="detailed-search-body">
+                <div class="form-box size-width">
+                    <div class="form-head">幅（mm）</div>
+                    <div class="form-body">
+                        <%= f.text_field :size_width_from, class: "form-item", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :size_width_to, class: "form-item", placeholder: "max" %>
+                    </div>                
+                </div>
+                <div class="form-box size-height">
+                    <div class="form-head">高さ（mm）</div>
+                    <div class="form-body">
+                        <%= f.text_field :size_height_from, class: "form-item", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :size_height_to, class: "form-item", placeholder: "max" %>
+                    </div>                                
+                </div>
+                <div class="form-box size-depth">
+                    <div class="form-head">奥行き（mm）</div>
+                    <div class="form-body">
+                        <%= f.text_field :size_depth_from, class: "form-item", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :size_depth_to, class: "form-item", placeholder: "max" %>
+                    </div>                                
+                </div>
+            </div>
+            <div class="detailed-search-head">予算</div>
+            <div class="detailed-search-body">
+                <div class="form-box">
+                    <div class="form-head">価格（円）</div>
+                    <div class="form-body">
+                        <%= f.text_field :price_from, class: "form-item", placeholder: "min" %>
+                        <span>〜</span>
+                        <%= f.text_field :price_to, class: "form-item", placeholder: "max" %>
+                    </div>                
+                </div>
+            </div>
+            <%= f.submit "絞り込み", class: "search-btn" %>
+            <% end %>
+        </div>
+    </div>
+</div>
