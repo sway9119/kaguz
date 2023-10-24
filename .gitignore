@@ -62,5 +62,11 @@ yarn-debug.log*
 yarn.lock
 package-lock.json
 
-# Develop環境
-/.env
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# uploaded
+/public/uploads/*
+
+# env
+.env
