@@ -58,4 +58,9 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  # ログ
+  config.logger = ActiveSupport::Logger.new(STDOUT) # 標準出力するためのLogger
+  config.logger = ActiveSupport::Logger.new("log/development.log", 'daily') # 引数なしで初期化したら、log/*.logが指定されるっぽい？？
+  config.logger.formatter = Logger::Formatter.new # 日付やプロセスidを表示する
 end
