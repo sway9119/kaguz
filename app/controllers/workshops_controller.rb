@@ -1,8 +1,7 @@
 class WorkshopsController < ApplicationController
+  layout 'application'
 
-    layout "application"
-
-    def show
-        @workshop = Workshop.find(params[:id])
-    end
+  def show
+    @workshop = Workshop.find(params[:id])
+  end
 end

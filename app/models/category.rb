@@ -1,4 +1,3 @@
 class Category < ApplicationRecord
-    has_one :furniture
+  has_one :furniture
 end
-        

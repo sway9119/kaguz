@@ -10,4 +10,16 @@ class Furniture < ApplicationRecord
   has_many :furniture_colors
   has_many :colors, through: :furniture_colors
   mount_uploader :image, ImageUploader
+
+  scope :with_category_info, lambda {
+    joins(:category)
+      .select('categories.id as category_id, categories.name as category_name, count(*) as category_count')
+      .group(:category_id, :category_name)
+  }
+
+  scope :with_scene_info, lambda {
+    joins(:scene)
+      .select('scenes.id as scene_id, scenes.name as scene_name, count(*) as scene_count')
+      .group(:scene_id, :scene_name)
+  end
 end

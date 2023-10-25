@@ -1,3 +1,3 @@
 class Color < ApplicationRecord
-    has_one :furniture
+  has_one :furniture
 end

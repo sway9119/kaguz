@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# AddColumnCssClassNameToColors
 class AddColumnCssClassNameToColors < ActiveRecord::Migration[5.2]
   def change
-    add_column :colors, :css_class_name, :string, comment: "CSSクラス名"
+    add_column :colors, :css_class_name, :string, comment: 'CSSクラス名'
   end
 end

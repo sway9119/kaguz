@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# CreateColors
 class CreateColors < ActiveRecord::Migration[5.2]
   def change
     create_table :colors do |t|
-      t.string :name, null: false, comment: "色名称"
+      t.string :name, null: false, comment: '色名称'
       t.timestamps
     end
   end
