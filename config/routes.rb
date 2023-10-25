@@ -1,11 +1,12 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  root to: "home#index"
+Rails.application.routes.draw do
+  root to: 'home#index'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  
+
   get    '/signup',  to: 'users#new'
   post   '/signup',  to: 'users#create'
   get    '/mypage',  to: 'users#show'
@@ -13,12 +14,12 @@ Rails.application.routes.draw do
 
   # 管理画面
   namespace :admin do
-    get    '/'     , to: 'home#index', as: :root
+    get    '/', to: 'home#index', as: :root
     get    '/login', to: 'sessions#new'
     post   '/login', to: 'sessions#create'
   end
 
-  resources :notifications  
+  resources :notifications
   resources :users
 
   resources :home
@@ -31,5 +32,4 @@ Rails.application.routes.draw do
   end
 
   resources :workshops
-
 end
