@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class
 class Workshop < ApplicationRecord
   GOOGLE_API_KEY = ENV['GOOGLE_API_KEY']
 
