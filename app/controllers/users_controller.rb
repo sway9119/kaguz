@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class
 class UsersController < ApplicationController
   layout 'home'
 

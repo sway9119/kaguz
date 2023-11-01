@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class
 class HomeController < ApplicationController
   before_action :get_categories_for_sidebar
 

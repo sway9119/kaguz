@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# class
 module Admin
   # Sessionを管理するコントローラ
   class SessionsController < ApplicationController
