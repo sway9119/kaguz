@@ -21,5 +21,5 @@ class Furniture < ApplicationRecord
     joins(:scene)
       .select('scenes.id as scene_id, scenes.name as scene_name, count(*) as scene_count')
       .group(:scene_id, :scene_name)
-  end
+  }
 end
