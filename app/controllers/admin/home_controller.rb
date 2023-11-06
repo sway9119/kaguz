@@ -1,7 +1,11 @@
-class Admin::HomeController < ApplicationController
+# frozen_string_literal: true
 
-  layout "home"
+# class
+module Admin
+  # HomeController
+  class HomeController < ApplicationController
+    layout 'home'
 
-  def index
+    def index; end
   end
 end

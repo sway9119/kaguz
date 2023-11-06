@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# AddColumnColorToFurnitures
 class AddColumnColorToFurnitures < ActiveRecord::Migration[5.2]
   def change
-    add_column :furnitures, :color_id, :integer, comment: "色ID"
+    add_column :furnitures, :color_id, :integer, comment: '色ID'
   end
 end

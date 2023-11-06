@@ -3,8 +3,8 @@
 # これはFurnituresControllerクラスです。
 # このクラスは家具に関連するアクションを処理します。
 class FurnituresController < ApplicationController
-  before_action :get_categories_for_sidebar
-  before_action :get_scenes_for_sidebar
+  before_action :create_categories_hash
+  before_action :create_scenes_hash
 
   layout 'application'
 
@@ -25,33 +25,25 @@ class FurnituresController < ApplicationController
   end
 
   def filter_search
-    @furnitures = Furniture.all
+    filter_conditions = []
 
-    material_ids = params[:material_ids].reject(&:empty?)
-    @furnitures = @furnitures.where(material_id: material_ids) if material_ids.present?
+    filter_conditions << ['material_id IN (?)', params[:material_ids]] if params[:material_ids].present?
+    filter_conditions << ['color_id IN (?)', params[:color_ids]] if params[:color_ids].present?
 
-    color_ids = params[:color_ids].reject(&:empty?)
-    @furnitures = @furnitures.where(color_id: color_ids) if color_ids.present?
+    size_attributes = %w[width height depth]
+    size_attributes.each do |attribute|
+      filter_conditions.concat(range_conditions(attribute, "size_#{attribute}"))
+    end
 
-    size_width_from = params[:size_width_from]
-    @furnitures = @furnitures.where("width >= #{size_width_from}") if size_width_from.present?
-    size_width_to = params[:size_width_to]
-    @furnitures = @furnitures.where("width <= #{size_width_to}") if size_width_to.present?
+    price_attributes = %w[price]
+    price_attributes.each do |attribute|
+      filter_conditions.concat(range_conditions(attribute, attribute.to_s))
+    end
 
-    size_height_from = params[:size_height_from]
-    @furnitures = @furnitures.where("height >= #{size_height_from}") if size_height_from.present?
-    size_height_to = params[:size_height_to]
-    @furnitures = @furnitures.where("height <= #{size_height_to}") if size_height_to.present?
+    where_clause = filter_conditions.map(&:first).join(' AND ')
+    where_values = filter_conditions.flat_map { |condition| condition[1] }
 
-    size_depth_from = params[:size_depth_from]
-    @furnitures = @furnitures.where("depth >= #{size_depth_from}") if size_depth_from.present?
-    size_depth_to = params[:size_depth_to]
-    @furnitures = @furnitures.where("depth <= #{size_depth_to}") if size_depth_to.present?
-
-    price_from = params[:price_from]
-    @furnitures = @furnitures.where("price >= #{price_from}") if price_from.present?
-    price_to = params[:price_to]
-    @furnitures = @furnitures.where("price <= #{price_to}") if price_to.present?
+    @furnitures = Furniture.where(where_clause, *where_values)
 
     render 'index'
   end
@@ -61,16 +53,12 @@ class FurnituresController < ApplicationController
     render 'index'
   end
 
-  def get_categories_for_sidebar
-    @categories_hash = Furniture.joins(:category).select('category_id, categories.name as category_name, count(*) as category_count').group(
-      :category_id, :category_name
-    )
+  def create_categories_hash
+    @categories_hash = Furniture.with_category_info
   end
 
-  def get_scenes_for_sidebar
-    @scenes_hash = Furniture.joins(:scenes).select('scene_id, scenes.name as scene_name, count(*) as scene_count').group(
-      :scene_id, :scene_name
-    )
+  def create_scenes_hash
+    @scenes_hash = Furniture.with_scene_info
   end
 
   def new
@@ -94,6 +82,20 @@ class FurnituresController < ApplicationController
   end
 
   private
+
+  def range_conditions(attribute, param_base)
+    conditions = []
+    from_value = params["#{param_base}_from"]
+    to_value = params["#{param_base}_to"]
+    if from_value.present? && to_value.present?
+      conditions << ["#{attribute} BETWEEN ? AND ?", from_value, to_value]
+    elsif from_value.present?
+      conditions << ["#{attribute} >= ?", from_value]
+    elsif to_value.present?
+      conditions << ["#{attribute} <= ?", to_value]
+    end
+    conditions
+  end
 
   def furniture_params
     params.require(:furniture)

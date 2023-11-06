@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
+# class
 class UsersController < ApplicationController
-  
-  layout "home"
+  layout 'home'
 
   def new
     @user = User.new
